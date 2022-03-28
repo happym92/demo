@@ -1,0 +1,14 @@
+GIT BASH 명령어
+
+- git 계정 설정
+git config --global user.name "유저이름"
+git config --global user.email "유저 이메일"
+
+git init    //.git 파일 생성
+git add .   //선택한 프로젝트 폴더 내의 모든 파일 관리
+  -> 특정파일만 하고 싶다면  git add 파일이름.파일형식  ex) git add a.txt
+git status   //상태확인
+git commit -m "주석"   //커밋
+git remote add origin 3번에서 저장한 깃허브 저장소 주소
+
+git push -u origin master

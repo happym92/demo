@@ -1,0 +1,27 @@
+2022-03-28 10:12:20.375  INFO 25376 --- [restartedMain] o.s.nativex.NativeListener               : AOT mode disabled
+2022-03-28 10:12:20.433  INFO 25376 --- [restartedMain] com.example.demo.DemoApplication         : Starting DemoApplication using Java 18 on DESKTOP-JT734OQ with PID 25376 (D:\MyWork\newWork\workspace\demo\bin\main started by 1iamm in D:\MyWork\newWork\workspace\demo)
+2022-03-28 10:12:20.434  INFO 25376 --- [restartedMain] com.example.demo.DemoApplication         : No active profile set, falling back to 1 default profile: "default"
+2022-03-28 10:12:20.472  INFO 25376 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\1iamm\.gradle\caches\modules-2\files-2.1\com.oracle.database.jdbc\ojdbc8\21.3.0.0\73649ab9bfb94daa4df21b80c98ac35aea4aa2f5\ojdbc8-21.3.0.0.jar referenced one or more files that do not exist: file:/C:/Users/1iamm/.gradle/caches/modules-2/files-2.1/com.oracle.database.jdbc/ojdbc8/21.3.0.0/73649ab9bfb94daa4df21b80c98ac35aea4aa2f5/oraclepki.jar
+2022-03-28 10:12:20.473  INFO 25376 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-03-28 10:12:20.473  INFO 25376 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-03-28 10:12:21.422  INFO 25376 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-03-28 10:12:21.431  INFO 25376 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-28 10:12:21.431  INFO 25376 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-28 10:12:21.525  INFO 25376 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-28 10:12:21.525  INFO 25376 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1052 ms
+2022-03-28 10:12:22.190  INFO 25376 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-03-28 10:12:22.226  INFO 25376 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-03-28 10:12:22.236  INFO 25376 --- [restartedMain] com.example.demo.DemoApplication         : Started DemoApplication in 2.173 seconds (JVM running for 3.334)
+2022-03-28 10:12:39.970  INFO 25376 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-28 10:12:39.970  INFO 25376 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-03-28 10:12:39.971  INFO 25376 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-03-28 10:12:39.993  INFO 25376 --- [http-nio-8080-exec-1] c.e.demo.base.controller.BaseController  : 1.콜하기전
+2022-03-28 10:12:39.994  INFO 25376 --- [http-nio-8080-exec-1] c.example.demo.base.service.BaseService  : 2.콜하기전_메소드안
+2022-03-28 10:12:40.010  INFO 25376 --- [http-nio-8080-exec-1] c.example.demo.base.service.BaseService  : 3.콜후 subscri
+2022-03-28 10:12:40.225  INFO 25376 --- [http-nio-8080-exec-1] c.e.demo.base.controller.BaseController  : 4.콜후
+2022-03-28 10:12:40.225  INFO 25376 --- [http-nio-8080-exec-1] c.e.demo.base.controller.BaseController  : 서비스 리턴 스트링 :SERVICE_CALL_STRING
+2022-03-28 10:12:40.245  INFO 25376 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-03-28 10:12:40.250  WARN 25376 --- [http-nio-8080-exec-1] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2022-03-28 10:12:40.625  INFO 25376 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-03-28 10:12:40.778  INFO 25376 --- [http-nio-8080-exec-1] c.e.demo.base.controller.BaseController  : testdb : 11
+2022-03-28 10:12:55.436  INFO 25376 --- [reactor-http-nio-2] c.example.demo.base.service.BaseService  : 레스폰수~ GATHER_RETURN STRING
