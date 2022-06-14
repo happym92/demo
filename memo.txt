@@ -1,14 +1,20 @@
-GIT BASH ¸í·É¾î
+GIT BASH ëª…ë ¹ì–´
 
-- git °èÁ¤ ¼³Á¤
-git config --global user.name "À¯ÀúÀÌ¸§"
-git config --global user.email "À¯Àú ÀÌ¸ŞÀÏ"
+- git ê³„ì • ì„¤ì •
+git config --global user.name "ìœ ì €ì´ë¦„"
+git config --global user.email "ìœ ì € ì´ë©”ì¼"
 
-git init    //.git ÆÄÀÏ »ı¼º
-git add .   //¼±ÅÃÇÑ ÇÁ·ÎÁ§Æ® Æú´õ ³»ÀÇ ¸ğµç ÆÄÀÏ °ü¸®
-  -> Æ¯Á¤ÆÄÀÏ¸¸ ÇÏ°í ½Í´Ù¸é  git add ÆÄÀÏÀÌ¸§.ÆÄÀÏÇü½Ä  ex) git add a.txt
-git status   //»óÅÂÈ®ÀÎ
-git commit -m "ÁÖ¼®"   //Ä¿¹Ô
-git remote add origin 3¹ø¿¡¼­ ÀúÀåÇÑ ±êÇãºê ÀúÀå¼Ò ÁÖ¼Ò
+git init    //.git íŒŒì¼ ìƒì„±
+git add .   //ì„ íƒí•œ í”„ë¡œì íŠ¸ í´ë” ë‚´ì˜ ëª¨ë“  íŒŒì¼ ê´€ë¦¬
+  -> íŠ¹ì •íŒŒì¼ë§Œ í•˜ê³  ì‹¶ë‹¤ë©´  git add íŒŒì¼ì´ë¦„.íŒŒì¼í˜•ì‹  ex) git add a.txt
+git status   //ìƒíƒœí™•ì¸
+git commit -m "ì£¼ì„"   //ì»¤ë°‹
+git remote add origin 3ë²ˆì—ì„œ ì €ì¥í•œ ê¹ƒí—ˆë¸Œ ì €ì¥ì†Œ ì£¼ì†Œ
 
 git push -u origin master
+
+
+#Resttemplate ìŠ¤í”„ë§ 5.0 ì´ì „ê¹Œì§€ ì‚¬ìš©í•œ HTTP í†µì‹  í…œí”Œë¦¿
+#Webclient ìŠ¤í”„ë§ 5.0 ë¶€í„° ì¶”ê°€ëœ ì¸í„°í˜ì´ìŠ¤
+
+# ë°°Firebase APP Distribution ì•± ë°°í¬ íˆ´?
