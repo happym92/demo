@@ -1,4 +1,4 @@
-package com.example.demo.base.vo;
+package com.hm.mydata.base.vo;
 
 import lombok.Data;
 import lombok.Getter;

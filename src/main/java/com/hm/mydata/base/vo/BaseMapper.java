@@ -1,4 +1,4 @@
-package com.example.demo.base.vo;
+package com.hm.mydata.base.vo;
 
 import org.apache.ibatis.annotations.Mapper;
 

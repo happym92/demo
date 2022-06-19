@@ -9,6 +9,7 @@ logging:
     
 #datasource (oracle) 
 spring :
+ gateway-url: http://localhost:8081
  datasource :
   driver-class-name : oracle.jdbc.driver.OracleDriver 
   url : jdbc:oracle:thin:@192.168.24.35:1521:XE 

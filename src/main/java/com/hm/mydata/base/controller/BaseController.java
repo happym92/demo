@@ -1,4 +1,4 @@
-package com.example.demo.base.controller;
+package com.hm.mydata.base.controller;
 
 import java.time.Duration;
 
@@ -10,8 +10,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.reactive.function.client.WebClient;
 
-import com.example.demo.base.service.BaseService;
-import com.example.demo.base.vo.ReturnVO;
+import com.hm.mydata.base.service.BaseService;
+import com.hm.mydata.base.vo.ReturnVO;
+import com.hm.mydata.common.config.WebClientConfig;
 
 import lombok.extern.slf4j.Slf4j;
 import reactor.core.publisher.Flux;
@@ -23,6 +24,9 @@ public class BaseController {
 
 	private Logger log = LoggerFactory.getLogger(getClass());
 
+	@Autowired
+	private WebClientConfig wcc;
+	
 	@Autowired
 	private BaseService baseService;
 
@@ -36,8 +40,6 @@ public class BaseController {
 		log.info("testdb : " + testdb);
 		return "LAST_CALL";
 	}
-
-	
 	
 	
 	@GetMapping("/flux")
@@ -47,13 +49,36 @@ public class BaseController {
 
 	@GetMapping("/api-call")
 	Mono<String> apicall() {
-		return this.callApi();
+//		return this.callApi();
+		return this.configcall();
 	}
 
 	public Mono<String> callApi() {
 		WebClient wc = WebClient.builder().baseUrl("http://localhost:8081").build();
-		return wc.get().uri("/testapi").accept(MediaType.APPLICATION_JSON_UTF8).header("Autorization", "Bearer " + "dd")
-				.retrieve().bodyToMono(String.class).timeout(Duration.ofMillis(300));
+		return wc.get()
+				 .uri("/testapi")
+				 .accept(MediaType.APPLICATION_JSON_UTF8)
+				 .header("Autorization", "Bearer " + "dd")
+				 .retrieve()
+				 .bodyToMono(String.class);
+//				 .timeout(Duration.ofMillis(300));
+		
+		
+	}
+	
+	public Mono<String> configcall() {
+		log.info("webclient config call!!!");
+//		WebClient.Builder webb = WebClient.builder();
+		WebClient wc = wcc.apiClient(WebClient.builder());
+		return wc.get()
+				 .uri("/testapi")
+				 .accept(MediaType.APPLICATION_JSON_UTF8)
+				 .header("Autorization", "Bearer " + "dd")
+				 .retrieve()
+				 .bodyToMono(String.class);
+//				 .timeout(Duration.ofMillis(300));
+		
+		
 	}
 
 }

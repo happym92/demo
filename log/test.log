@@ -1,27 +1,653 @@
-2022-03-28 10:12:20.375  INFO 25376 --- [restartedMain] o.s.nativex.NativeListener               : AOT mode disabled
-2022-03-28 10:12:20.433  INFO 25376 --- [restartedMain] com.example.demo.DemoApplication         : Starting DemoApplication using Java 18 on DESKTOP-JT734OQ with PID 25376 (D:\MyWork\newWork\workspace\demo\bin\main started by 1iamm in D:\MyWork\newWork\workspace\demo)
-2022-03-28 10:12:20.434  INFO 25376 --- [restartedMain] com.example.demo.DemoApplication         : No active profile set, falling back to 1 default profile: "default"
-2022-03-28 10:12:20.472  INFO 25376 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\1iamm\.gradle\caches\modules-2\files-2.1\com.oracle.database.jdbc\ojdbc8\21.3.0.0\73649ab9bfb94daa4df21b80c98ac35aea4aa2f5\ojdbc8-21.3.0.0.jar referenced one or more files that do not exist: file:/C:/Users/1iamm/.gradle/caches/modules-2/files-2.1/com.oracle.database.jdbc/ojdbc8/21.3.0.0/73649ab9bfb94daa4df21b80c98ac35aea4aa2f5/oraclepki.jar
-2022-03-28 10:12:20.473  INFO 25376 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-03-28 10:12:20.473  INFO 25376 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-03-28 10:12:21.422  INFO 25376 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-03-28 10:12:21.431  INFO 25376 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-03-28 10:12:21.431  INFO 25376 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
-2022-03-28 10:12:21.525  INFO 25376 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-03-28 10:12:21.525  INFO 25376 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1052 ms
-2022-03-28 10:12:22.190  INFO 25376 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-03-28 10:12:22.226  INFO 25376 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-03-28 10:12:22.236  INFO 25376 --- [restartedMain] com.example.demo.DemoApplication         : Started DemoApplication in 2.173 seconds (JVM running for 3.334)
-2022-03-28 10:12:39.970  INFO 25376 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-03-28 10:12:39.970  INFO 25376 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-03-28 10:12:39.971  INFO 25376 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2022-03-28 10:12:39.993  INFO 25376 --- [http-nio-8080-exec-1] c.e.demo.base.controller.BaseController  : 1.콜하기전
-2022-03-28 10:12:39.994  INFO 25376 --- [http-nio-8080-exec-1] c.example.demo.base.service.BaseService  : 2.콜하기전_메소드안
-2022-03-28 10:12:40.010  INFO 25376 --- [http-nio-8080-exec-1] c.example.demo.base.service.BaseService  : 3.콜후 subscri
-2022-03-28 10:12:40.225  INFO 25376 --- [http-nio-8080-exec-1] c.e.demo.base.controller.BaseController  : 4.콜후
-2022-03-28 10:12:40.225  INFO 25376 --- [http-nio-8080-exec-1] c.e.demo.base.controller.BaseController  : 서비스 리턴 스트링 :SERVICE_CALL_STRING
-2022-03-28 10:12:40.245  INFO 25376 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-03-28 10:12:40.250  WARN 25376 --- [http-nio-8080-exec-1] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
-2022-03-28 10:12:40.625  INFO 25376 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-03-28 10:12:40.778  INFO 25376 --- [http-nio-8080-exec-1] c.e.demo.base.controller.BaseController  : testdb : 11
-2022-03-28 10:12:55.436  INFO 25376 --- [reactor-http-nio-2] c.example.demo.base.service.BaseService  : 레스폰수~ GATHER_RETURN STRING
+2022-06-20 00:00:17.811  INFO 50736 --- [restartedMain] o.s.nativex.NativeListener               : AOT mode disabled
+2022-06-20 00:00:17.815  INFO 50736 --- [restartedMain] com.hm.mydata.DemoApplication            : Starting DemoApplication using Java 18 on DESKTOP-JT734OQ with PID 50736 (D:\MyWork\newWork\workspace\hm\bin\main started by 1iamm in D:\MyWork\newWork\workspace\hm)
+2022-06-20 00:00:17.815  INFO 50736 --- [restartedMain] com.hm.mydata.DemoApplication            : No active profile set, falling back to 1 default profile: "default"
+2022-06-20 00:00:18.010  INFO 50736 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-06-20 00:00:18.011  INFO 50736 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-20 00:00:18.011  INFO 50736 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-06-20 00:00:18.049  INFO 50736 --- [restartedMain] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2022-06-20 00:00:18.049  INFO 50736 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 231 ms
+2022-06-20 00:00:18.196  WARN 50736 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-06-20 00:00:18.204  INFO 50736 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-06-20 00:00:18.208  INFO 50736 --- [restartedMain] com.hm.mydata.DemoApplication            : Started DemoApplication in 0.417 seconds (JVM running for 5851.518)
+2022-06-20 00:00:18.209  INFO 50736 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-06-20 00:00:21.059  INFO 50736 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-20 00:00:21.059  INFO 50736 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-06-20 00:00:21.060  INFO 50736 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-06-20 00:00:21.069  INFO 50736 --- [reactor-http-nio-2] c.hm.mydata.md.service.WebClientService  : else :: [Content-Type:"application/json", Transfer-Encoding:"chunked", Date:"Sun, 19 Jun 2022 15:00:21 GMT", Connection:"close"]
+2022-06-20 00:00:21.071  INFO 50736 --- [http-nio-8080-exec-2] c.hm.mydata.md.service.WebClientService  : END
+2022-06-20 00:00:21.072  INFO 50736 --- [http-nio-8080-exec-2] c.hm.mydata.md.service.WebClientService  : resVOCertResVO(org_code=null, install_url_android=null, app_scheme_android=null, app_scheme_iOS=null, install_url_iOS=null, code=null, state=null, api_tran_id=null, error=Internal Server Error, error_description=null)
+2022-06-20 00:01:11.132  INFO 50736 --- [restartedMain] o.s.nativex.NativeListener               : AOT mode disabled
+2022-06-20 00:01:11.134  INFO 50736 --- [restartedMain] com.hm.mydata.DemoApplication            : Starting DemoApplication using Java 18 on DESKTOP-JT734OQ with PID 50736 (D:\MyWork\newWork\workspace\hm\bin\main started by 1iamm in D:\MyWork\newWork\workspace\hm)
+2022-06-20 00:01:11.134  INFO 50736 --- [restartedMain] com.hm.mydata.DemoApplication            : No active profile set, falling back to 1 default profile: "default"
+2022-06-20 00:01:11.290  INFO 50736 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-06-20 00:01:11.290  INFO 50736 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-20 00:01:11.290  INFO 50736 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-06-20 00:01:11.326  INFO 50736 --- [restartedMain] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2022-06-20 00:01:11.326  INFO 50736 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 191 ms
+2022-06-20 00:01:11.430  WARN 50736 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-06-20 00:01:11.441  INFO 50736 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-06-20 00:01:11.444  INFO 50736 --- [restartedMain] com.hm.mydata.DemoApplication            : Started DemoApplication in 0.328 seconds (JVM running for 5904.754)
+2022-06-20 00:01:11.445  INFO 50736 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-06-20 00:01:15.612  INFO 50736 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-20 00:01:15.612  INFO 50736 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-06-20 00:01:15.613  INFO 50736 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-06-20 00:01:15.622  INFO 50736 --- [reactor-http-nio-2] c.hm.mydata.md.service.WebClientService  : else :: [Content-Type:"application/json", Transfer-Encoding:"chunked", Date:"Sun, 19 Jun 2022 15:01:15 GMT", Connection:"close"]
+2022-06-20 00:01:15.623  INFO 50736 --- [http-nio-8080-exec-2] c.hm.mydata.md.service.WebClientService  : END
+2022-06-20 00:01:15.624  INFO 50736 --- [http-nio-8080-exec-2] c.hm.mydata.md.service.WebClientService  : resVO{}
+2022-06-20 00:01:15.627 ERROR 50736 --- [http-nio-8080-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.ClassCastException: class org.springframework.boot.configurationprocessor.json.JSONObject cannot be cast to class com.hm.mydata.md.vo.CertResVO (org.springframework.boot.configurationprocessor.json.JSONObject is in unnamed module of loader 'app'; com.hm.mydata.md.vo.CertResVO is in unnamed module of loader org.springframework.boot.devtools.restart.classloader.RestartClassLoader @20f071d1)] with root cause
+
+java.lang.ClassCastException: class org.springframework.boot.configurationprocessor.json.JSONObject cannot be cast to class com.hm.mydata.md.vo.CertResVO (org.springframework.boot.configurationprocessor.json.JSONObject is in unnamed module of loader 'app'; com.hm.mydata.md.vo.CertResVO is in unnamed module of loader org.springframework.boot.devtools.restart.classloader.RestartClassLoader @20f071d1)
+	at com.hm.mydata.md.service.WebClientService.개별인증001(WebClientService.java:84) ~[main/:na]
+	at com.hm.mydata.md.controller.WebClientController.getIdiviCertAuthorizeCode(WebClientController.java:28) ~[main/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681) ~[tomcat-embed-core-9.0.58.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.58.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:359) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:889) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1735) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2022-06-20 00:02:13.307  INFO 50736 --- [restartedMain] o.s.nativex.NativeListener               : AOT mode disabled
+2022-06-20 00:02:13.308  INFO 50736 --- [restartedMain] com.hm.mydata.DemoApplication            : Starting DemoApplication using Java 18 on DESKTOP-JT734OQ with PID 50736 (D:\MyWork\newWork\workspace\hm\bin\main started by 1iamm in D:\MyWork\newWork\workspace\hm)
+2022-06-20 00:02:13.309  INFO 50736 --- [restartedMain] com.hm.mydata.DemoApplication            : No active profile set, falling back to 1 default profile: "default"
+2022-06-20 00:02:13.466  INFO 50736 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-06-20 00:02:13.466  INFO 50736 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-20 00:02:13.466  INFO 50736 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-06-20 00:02:13.502  INFO 50736 --- [restartedMain] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2022-06-20 00:02:13.502  INFO 50736 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 192 ms
+2022-06-20 00:02:13.606  WARN 50736 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-06-20 00:02:13.622  INFO 50736 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-06-20 00:02:13.625  INFO 50736 --- [restartedMain] com.hm.mydata.DemoApplication            : Started DemoApplication in 0.333 seconds (JVM running for 5966.935)
+2022-06-20 00:02:13.625  INFO 50736 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-06-20 00:02:17.201  INFO 50736 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-20 00:02:17.201  INFO 50736 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-06-20 00:02:17.202  INFO 50736 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-06-20 00:02:17.210  INFO 50736 --- [reactor-http-nio-2] c.hm.mydata.md.service.WebClientService  : else :: [Content-Type:"application/json", Transfer-Encoding:"chunked", Date:"Sun, 19 Jun 2022 15:02:17 GMT", Connection:"close"]
+2022-06-20 00:02:17.212  INFO 50736 --- [http-nio-8080-exec-2] c.hm.mydata.md.service.WebClientService  : END
+2022-06-20 00:02:17.213  INFO 50736 --- [http-nio-8080-exec-2] c.hm.mydata.md.service.WebClientService  : resVO{}
+2022-06-20 00:02:17.215 ERROR 50736 --- [http-nio-8080-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.ClassCastException: class org.springframework.boot.configurationprocessor.json.JSONObject cannot be cast to class com.hm.mydata.md.vo.CertResVO (org.springframework.boot.configurationprocessor.json.JSONObject is in unnamed module of loader 'app'; com.hm.mydata.md.vo.CertResVO is in unnamed module of loader org.springframework.boot.devtools.restart.classloader.RestartClassLoader @57d59893)] with root cause
+
+java.lang.ClassCastException: class org.springframework.boot.configurationprocessor.json.JSONObject cannot be cast to class com.hm.mydata.md.vo.CertResVO (org.springframework.boot.configurationprocessor.json.JSONObject is in unnamed module of loader 'app'; com.hm.mydata.md.vo.CertResVO is in unnamed module of loader org.springframework.boot.devtools.restart.classloader.RestartClassLoader @57d59893)
+	at com.hm.mydata.md.service.WebClientService.개별인증001(WebClientService.java:86) ~[main/:na]
+	at com.hm.mydata.md.controller.WebClientController.getIdiviCertAuthorizeCode(WebClientController.java:28) ~[main/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681) ~[tomcat-embed-core-9.0.58.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.58.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:359) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:889) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1735) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2022-06-20 00:06:31.870  INFO 50736 --- [reactor-http-nio-3] c.hm.mydata.md.service.WebClientService  : 302, 200 응답 웹방식 응답
+2022-06-20 00:06:31.870  INFO 50736 --- [http-nio-8080-exec-4] c.hm.mydata.md.service.WebClientService  : END
+2022-06-20 00:06:31.870  INFO 50736 --- [http-nio-8080-exec-4] c.hm.mydata.md.service.WebClientService  : resVO{}
+2022-06-20 00:06:31.871  INFO 50736 --- [http-nio-8080-exec-4] c.hm.mydata.md.service.WebClientService  : 200
+2022-06-20 00:06:55.242  INFO 50736 --- [restartedMain] o.s.nativex.NativeListener               : AOT mode disabled
+2022-06-20 00:06:55.243  INFO 50736 --- [restartedMain] com.hm.mydata.DemoApplication            : Starting DemoApplication using Java 18 on DESKTOP-JT734OQ with PID 50736 (D:\MyWork\newWork\workspace\hm\bin\main started by 1iamm in D:\MyWork\newWork\workspace\hm)
+2022-06-20 00:06:55.244  INFO 50736 --- [restartedMain] com.hm.mydata.DemoApplication            : No active profile set, falling back to 1 default profile: "default"
+2022-06-20 00:06:55.402  INFO 50736 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-06-20 00:06:55.402  INFO 50736 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-20 00:06:55.402  INFO 50736 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-06-20 00:06:55.434  INFO 50736 --- [restartedMain] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2022-06-20 00:06:55.434  INFO 50736 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 189 ms
+2022-06-20 00:06:55.542  WARN 50736 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-06-20 00:06:55.551  INFO 50736 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-06-20 00:06:55.555  INFO 50736 --- [restartedMain] com.hm.mydata.DemoApplication            : Started DemoApplication in 0.329 seconds (JVM running for 6248.865)
+2022-06-20 00:06:55.556  INFO 50736 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-06-20 00:06:57.372  INFO 50736 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-20 00:06:57.372  INFO 50736 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-06-20 00:06:57.372  INFO 50736 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2022-06-20 00:06:57.380  INFO 50736 --- [reactor-http-nio-2] c.hm.mydata.md.service.WebClientService  : 302, 200 응답 웹방식 응답
+2022-06-20 00:06:57.383  INFO 50736 --- [http-nio-8080-exec-2] c.hm.mydata.md.service.WebClientService  : END
+2022-06-20 00:06:57.383  INFO 50736 --- [http-nio-8080-exec-2] c.hm.mydata.md.service.WebClientService  : resVOCertResVO(org_code=A1AAER0000, install_url_android=HTTP, app_scheme_android=ERKSE, app_scheme_iOS=IOS APPSCHEM, install_url_iOS=IOS URL, code=null, state=null, api_tran_id=null, error=400, error_description=invalid request)
+2022-06-20 00:06:57.383  INFO 50736 --- [http-nio-8080-exec-2] c.hm.mydata.md.service.WebClientService  : 200
+2022-06-20 00:07:52.548  INFO 50736 --- [reactor-http-nio-3] c.hm.mydata.md.service.WebClientService  : else :: [Location:"offerureeeel", Content-Type:"application/json", Transfer-Encoding:"chunked", Date:"Sun, 19 Jun 2022 15:07:52 GMT", Connection:"close"]
+2022-06-20 00:07:52.549  INFO 50736 --- [http-nio-8080-exec-3] c.hm.mydata.md.service.WebClientService  : END
+2022-06-20 00:07:52.549  INFO 50736 --- [http-nio-8080-exec-3] c.hm.mydata.md.service.WebClientService  : resVOCertResVO(org_code=A1AAER0000, install_url_android=HTTP, app_scheme_android=ERKSE, app_scheme_iOS=IOS APPSCHEM, install_url_iOS=IOS URL, code=null, state=null, api_tran_id=null, error=400, error_description=invalid request)
+2022-06-20 00:08:10.381  INFO 50736 --- [reactor-http-nio-4] c.hm.mydata.md.service.WebClientService  : else :: [Location:"offerureeeel", Content-Type:"application/json", Transfer-Encoding:"chunked", Date:"Sun, 19 Jun 2022 15:08:10 GMT", Connection:"close"]
+2022-06-20 00:08:10.382  INFO 50736 --- [http-nio-8080-exec-5] c.hm.mydata.md.service.WebClientService  : END
+2022-06-20 00:08:10.382  INFO 50736 --- [http-nio-8080-exec-5] c.hm.mydata.md.service.WebClientService  : resVOCertResVO(org_code=A1AAER0000, install_url_android=HTTP, app_scheme_android=ERKSE, app_scheme_iOS=IOS APPSCHEM, install_url_iOS=IOS URL, code=null, state=null, api_tran_id=null, error=400, error_description=invalid request)
+2022-06-20 00:15:22.539  INFO 50736 --- [restartedMain] o.s.nativex.NativeListener               : AOT mode disabled
+2022-06-20 00:15:22.540  INFO 50736 --- [restartedMain] com.hm.mydata.DemoApplication            : Starting DemoApplication using Java 18 on DESKTOP-JT734OQ with PID 50736 (D:\MyWork\newWork\workspace\hm\bin\main started by 1iamm in D:\MyWork\newWork\workspace\hm)
+2022-06-20 00:15:22.540  INFO 50736 --- [restartedMain] com.hm.mydata.DemoApplication            : No active profile set, falling back to 1 default profile: "default"
+2022-06-20 00:15:22.732  INFO 50736 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-06-20 00:15:22.732  INFO 50736 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-20 00:15:22.732  INFO 50736 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-06-20 00:15:22.765  INFO 50736 --- [restartedMain] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2022-06-20 00:15:22.765  INFO 50736 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 222 ms
+2022-06-20 00:15:22.910  WARN 50736 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-06-20 00:15:22.919  INFO 50736 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-06-20 00:15:22.923  INFO 50736 --- [restartedMain] com.hm.mydata.DemoApplication            : Started DemoApplication in 0.405 seconds (JVM running for 6756.233)
+2022-06-20 00:15:22.924  INFO 50736 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-06-20 00:15:27.416  INFO 50736 --- [restartedMain] o.s.nativex.NativeListener               : AOT mode disabled
+2022-06-20 00:15:27.418  INFO 50736 --- [restartedMain] com.hm.mydata.DemoApplication            : Starting DemoApplication using Java 18 on DESKTOP-JT734OQ with PID 50736 (D:\MyWork\newWork\workspace\hm\bin\main started by 1iamm in D:\MyWork\newWork\workspace\hm)
+2022-06-20 00:15:27.418  INFO 50736 --- [restartedMain] com.hm.mydata.DemoApplication            : No active profile set, falling back to 1 default profile: "default"
+2022-06-20 00:15:27.573  INFO 50736 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-06-20 00:15:27.573  INFO 50736 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-20 00:15:27.573  INFO 50736 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-06-20 00:15:27.606  INFO 50736 --- [restartedMain] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2022-06-20 00:15:27.606  INFO 50736 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 187 ms
+2022-06-20 00:15:27.707  WARN 50736 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-06-20 00:15:27.718  INFO 50736 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-06-20 00:15:27.721  INFO 50736 --- [restartedMain] com.hm.mydata.DemoApplication            : Started DemoApplication in 0.32 seconds (JVM running for 6761.031)
+2022-06-20 00:15:27.722  INFO 50736 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-06-20 00:15:40.267  INFO 50736 --- [restartedMain] o.s.nativex.NativeListener               : AOT mode disabled
+2022-06-20 00:15:40.269  INFO 50736 --- [restartedMain] com.hm.mydata.DemoApplication            : Starting DemoApplication using Java 18 on DESKTOP-JT734OQ with PID 50736 (D:\MyWork\newWork\workspace\hm\bin\main started by 1iamm in D:\MyWork\newWork\workspace\hm)
+2022-06-20 00:15:40.269  INFO 50736 --- [restartedMain] com.hm.mydata.DemoApplication            : No active profile set, falling back to 1 default profile: "default"
+2022-06-20 00:15:40.428  INFO 50736 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-06-20 00:15:40.428  INFO 50736 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-20 00:15:40.428  INFO 50736 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-06-20 00:15:40.461  INFO 50736 --- [restartedMain] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2022-06-20 00:15:40.461  INFO 50736 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 191 ms
+2022-06-20 00:15:40.582  WARN 50736 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-06-20 00:15:40.590  INFO 50736 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-06-20 00:15:40.593  INFO 50736 --- [restartedMain] com.hm.mydata.DemoApplication            : Started DemoApplication in 0.341 seconds (JVM running for 6773.903)
+2022-06-20 00:15:40.594  INFO 50736 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-06-20 00:16:16.290  INFO 50736 --- [restartedMain] o.s.nativex.NativeListener               : AOT mode disabled
+2022-06-20 00:16:16.292  INFO 50736 --- [restartedMain] com.hm.mydata.DemoApplication            : Starting DemoApplication using Java 18 on DESKTOP-JT734OQ with PID 50736 (D:\MyWork\newWork\workspace\hm\bin\main started by 1iamm in D:\MyWork\newWork\workspace\hm)
+2022-06-20 00:16:16.292  INFO 50736 --- [restartedMain] com.hm.mydata.DemoApplication            : No active profile set, falling back to 1 default profile: "default"
+2022-06-20 00:16:16.450  INFO 50736 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-06-20 00:16:16.451  INFO 50736 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-20 00:16:16.451  INFO 50736 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-06-20 00:16:16.484  INFO 50736 --- [restartedMain] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2022-06-20 00:16:16.484  INFO 50736 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 191 ms
+2022-06-20 00:16:16.591  WARN 50736 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-06-20 00:16:16.599  INFO 50736 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-06-20 00:16:16.603  INFO 50736 --- [restartedMain] com.hm.mydata.DemoApplication            : Started DemoApplication in 0.328 seconds (JVM running for 6809.913)
+2022-06-20 00:16:16.604  INFO 50736 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-06-20 00:16:29.255  INFO 50736 --- [restartedMain] o.s.nativex.NativeListener               : AOT mode disabled
+2022-06-20 00:16:29.257  INFO 50736 --- [restartedMain] com.hm.mydata.DemoApplication            : Starting DemoApplication using Java 18 on DESKTOP-JT734OQ with PID 50736 (D:\MyWork\newWork\workspace\hm\bin\main started by 1iamm in D:\MyWork\newWork\workspace\hm)
+2022-06-20 00:16:29.257  INFO 50736 --- [restartedMain] com.hm.mydata.DemoApplication            : No active profile set, falling back to 1 default profile: "default"
+2022-06-20 00:16:29.413  INFO 50736 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-06-20 00:16:29.413  INFO 50736 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-20 00:16:29.414  INFO 50736 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-06-20 00:16:29.446  INFO 50736 --- [restartedMain] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2022-06-20 00:16:29.446  INFO 50736 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 188 ms
+2022-06-20 00:16:29.550  WARN 50736 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-06-20 00:16:29.566  INFO 50736 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-06-20 00:16:29.570  INFO 50736 --- [restartedMain] com.hm.mydata.DemoApplication            : Started DemoApplication in 0.331 seconds (JVM running for 6822.88)
+2022-06-20 00:16:29.571  INFO 50736 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-06-20 00:16:34.150  INFO 50736 --- [restartedMain] o.s.nativex.NativeListener               : AOT mode disabled
+2022-06-20 00:16:34.151  INFO 50736 --- [restartedMain] com.hm.mydata.DemoApplication            : Starting DemoApplication using Java 18 on DESKTOP-JT734OQ with PID 50736 (D:\MyWork\newWork\workspace\hm\bin\main started by 1iamm in D:\MyWork\newWork\workspace\hm)
+2022-06-20 00:16:34.151  INFO 50736 --- [restartedMain] com.hm.mydata.DemoApplication            : No active profile set, falling back to 1 default profile: "default"
+2022-06-20 00:16:34.309  INFO 50736 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-06-20 00:16:34.309  INFO 50736 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-20 00:16:34.309  INFO 50736 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-06-20 00:16:34.341  INFO 50736 --- [restartedMain] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2022-06-20 00:16:34.341  INFO 50736 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 188 ms
+2022-06-20 00:16:34.443  WARN 50736 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-06-20 00:16:34.455  INFO 50736 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-06-20 00:16:34.458  INFO 50736 --- [restartedMain] com.hm.mydata.DemoApplication            : Started DemoApplication in 0.323 seconds (JVM running for 6827.768)
+2022-06-20 00:16:34.459  INFO 50736 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-06-20 00:16:43.074  INFO 50736 --- [restartedMain] o.s.nativex.NativeListener               : AOT mode disabled
+2022-06-20 00:16:43.075  INFO 50736 --- [restartedMain] com.hm.mydata.DemoApplication            : Starting DemoApplication using Java 18 on DESKTOP-JT734OQ with PID 50736 (D:\MyWork\newWork\workspace\hm\bin\main started by 1iamm in D:\MyWork\newWork\workspace\hm)
+2022-06-20 00:16:43.075  INFO 50736 --- [restartedMain] com.hm.mydata.DemoApplication            : No active profile set, falling back to 1 default profile: "default"
+2022-06-20 00:16:43.227  INFO 50736 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-06-20 00:16:43.228  INFO 50736 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-20 00:16:43.228  INFO 50736 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-06-20 00:16:43.277  INFO 50736 --- [restartedMain] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2022-06-20 00:16:43.277  INFO 50736 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 201 ms
+2022-06-20 00:16:43.388  WARN 50736 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-06-20 00:16:43.398  INFO 50736 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-06-20 00:16:43.401  INFO 50736 --- [restartedMain] com.hm.mydata.DemoApplication            : Started DemoApplication in 0.343 seconds (JVM running for 6836.711)
+2022-06-20 00:16:43.402  INFO 50736 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-06-20 00:16:47.996  INFO 50736 --- [restartedMain] o.s.nativex.NativeListener               : AOT mode disabled
+2022-06-20 00:16:47.998  INFO 50736 --- [restartedMain] com.hm.mydata.DemoApplication            : Starting DemoApplication using Java 18 on DESKTOP-JT734OQ with PID 50736 (D:\MyWork\newWork\workspace\hm\bin\main started by 1iamm in D:\MyWork\newWork\workspace\hm)
+2022-06-20 00:16:47.998  INFO 50736 --- [restartedMain] com.hm.mydata.DemoApplication            : No active profile set, falling back to 1 default profile: "default"
+2022-06-20 00:16:48.154  INFO 50736 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-06-20 00:16:48.154  INFO 50736 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-20 00:16:48.155  INFO 50736 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-06-20 00:16:48.187  INFO 50736 --- [restartedMain] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2022-06-20 00:16:48.187  INFO 50736 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 187 ms
+2022-06-20 00:16:48.291  WARN 50736 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-06-20 00:16:48.300  INFO 50736 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-06-20 00:16:48.303  INFO 50736 --- [restartedMain] com.hm.mydata.DemoApplication            : Started DemoApplication in 0.32 seconds (JVM running for 6841.613)
+2022-06-20 00:16:48.303  INFO 50736 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-06-20 00:17:12.028  INFO 50736 --- [restartedMain] o.s.nativex.NativeListener               : AOT mode disabled
+2022-06-20 00:17:12.029  INFO 50736 --- [restartedMain] com.hm.mydata.DemoApplication            : Starting DemoApplication using Java 18 on DESKTOP-JT734OQ with PID 50736 (D:\MyWork\newWork\workspace\hm\bin\main started by 1iamm in D:\MyWork\newWork\workspace\hm)
+2022-06-20 00:17:12.029  INFO 50736 --- [restartedMain] com.hm.mydata.DemoApplication            : No active profile set, falling back to 1 default profile: "default"
+2022-06-20 00:17:12.188  INFO 50736 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-06-20 00:17:12.189  INFO 50736 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-20 00:17:12.189  INFO 50736 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-06-20 00:17:12.221  INFO 50736 --- [restartedMain] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2022-06-20 00:17:12.221  INFO 50736 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 191 ms
+2022-06-20 00:17:12.247  WARN 50736 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'fileUploadUtil' defined in file [D:\MyWork\newWork\workspace\hm\bin\main\com\hm\mydata\common\utils\FileUploadUtil.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.hm.mydata.common.utils.FileUploadUtil]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	The declared package "kmds.com.framework.common.utils" does not match the expected package "com.hm.mydata.common.utils"
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	FileVo cannot be resolved to a type
+	The method upload(HttpServletRequest, MultipartFile[], String) from the type FileUploadUtil refers to the missing type FileVo
+	FileVo cannot be resolved to a type
+	FileVo cannot be resolved to a type
+	FileVo cannot be resolved to a type
+	The method emptyList() from the type Collections refers to the missing type FileVo
+	FileVo cannot be resolved to a type
+	FileVo cannot be resolved to a type
+	CustomException cannot be resolved to a type
+	ErrorCode cannot be resolved to a variable
+	CustomException cannot be resolved to a type
+	ErrorCode cannot be resolved to a variable
+
+2022-06-20 00:17:12.248  INFO 50736 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-06-20 00:17:12.251  INFO 50736 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-06-20 00:17:12.254 ERROR 50736 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'fileUploadUtil' defined in file [D:\MyWork\newWork\workspace\hm\bin\main\com\hm\mydata\common\utils\FileUploadUtil.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.hm.mydata.common.utils.FileUploadUtil]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	The declared package "kmds.com.framework.common.utils" does not match the expected package "com.hm.mydata.common.utils"
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	FileVo cannot be resolved to a type
+	The method upload(HttpServletRequest, MultipartFile[], String) from the type FileUploadUtil refers to the missing type FileVo
+	FileVo cannot be resolved to a type
+	FileVo cannot be resolved to a type
+	FileVo cannot be resolved to a type
+	The method emptyList() from the type Collections refers to the missing type FileVo
+	FileVo cannot be resolved to a type
+	FileVo cannot be resolved to a type
+	CustomException cannot be resolved to a type
+	ErrorCode cannot be resolved to a variable
+	CustomException cannot be resolved to a type
+	ErrorCode cannot be resolved to a variable
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1334) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1232) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.16.jar:5.3.16]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.16.jar:5.3.16]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:740) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:415) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1312) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301) ~[spring-boot-2.6.4.jar:2.6.4]
+	at com.hm.mydata.DemoApplication.main(DemoApplication.java:10) ~[main/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.6.4.jar:2.6.4]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.hm.mydata.common.utils.FileUploadUtil]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	The declared package "kmds.com.framework.common.utils" does not match the expected package "com.hm.mydata.common.utils"
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	FileVo cannot be resolved to a type
+	The method upload(HttpServletRequest, MultipartFile[], String) from the type FileUploadUtil refers to the missing type FileVo
+	FileVo cannot be resolved to a type
+	FileVo cannot be resolved to a type
+	FileVo cannot be resolved to a type
+	The method emptyList() from the type Collections refers to the missing type FileVo
+	FileVo cannot be resolved to a type
+	FileVo cannot be resolved to a type
+	CustomException cannot be resolved to a type
+	ErrorCode cannot be resolved to a variable
+	CustomException cannot be resolved to a type
+	ErrorCode cannot be resolved to a variable
+
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:224) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1326) ~[spring-beans-5.3.16.jar:5.3.16]
+	... 20 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problems: 
+	The declared package "kmds.com.framework.common.utils" does not match the expected package "com.hm.mydata.common.utils"
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	FileVo cannot be resolved to a type
+	The method upload(HttpServletRequest, MultipartFile[], String) from the type FileUploadUtil refers to the missing type FileVo
+	FileVo cannot be resolved to a type
+	FileVo cannot be resolved to a type
+	FileVo cannot be resolved to a type
+	The method emptyList() from the type Collections refers to the missing type FileVo
+	FileVo cannot be resolved to a type
+	FileVo cannot be resolved to a type
+	CustomException cannot be resolved to a type
+	ErrorCode cannot be resolved to a variable
+	CustomException cannot be resolved to a type
+	ErrorCode cannot be resolved to a variable
+
+	at com.hm.mydata.common.utils.FileUploadUtil.<init>(FileUploadUtil.java:1) ~[main/:na]
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483) ~[na:na]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:211) ~[spring-beans-5.3.16.jar:5.3.16]
+	... 22 common frames omitted
+
+2022-06-20 00:17:15.719  INFO 50736 --- [restartedMain] o.s.nativex.NativeListener               : AOT mode disabled
+2022-06-20 00:17:15.721  INFO 50736 --- [restartedMain] com.hm.mydata.DemoApplication            : Starting DemoApplication using Java 18 on DESKTOP-JT734OQ with PID 50736 (D:\MyWork\newWork\workspace\hm\bin\main started by 1iamm in D:\MyWork\newWork\workspace\hm)
+2022-06-20 00:17:15.721  INFO 50736 --- [restartedMain] com.hm.mydata.DemoApplication            : No active profile set, falling back to 1 default profile: "default"
+2022-06-20 00:17:15.891  INFO 50736 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-06-20 00:17:15.891  INFO 50736 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-20 00:17:15.891  INFO 50736 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-06-20 00:17:15.926  INFO 50736 --- [restartedMain] o.a.c.c.C.[Tomcat-4].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2022-06-20 00:17:15.926  INFO 50736 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 204 ms
+2022-06-20 00:17:15.952  WARN 50736 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'fileUploadUtil' defined in file [D:\MyWork\newWork\workspace\hm\bin\main\com\hm\mydata\common\utils\FileUploadUtil.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.hm.mydata.common.utils.FileUploadUtil]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	The declared package "kmds.com.framework.common.utils" does not match the expected package "com.hm.mydata.common.utils"
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	FileVo cannot be resolved to a type
+	The method upload(HttpServletRequest, MultipartFile[], String) from the type FileUploadUtil refers to the missing type FileVo
+	FileVo cannot be resolved to a type
+	FileVo cannot be resolved to a type
+	FileVo cannot be resolved to a type
+	The method emptyList() from the type Collections refers to the missing type FileVo
+	FileVo cannot be resolved to a type
+	FileVo cannot be resolved to a type
+	CustomException cannot be resolved to a type
+	ErrorCode cannot be resolved to a variable
+	CustomException cannot be resolved to a type
+	ErrorCode cannot be resolved to a variable
+
+2022-06-20 00:17:15.952  INFO 50736 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-06-20 00:17:15.955  INFO 50736 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-06-20 00:17:15.959 ERROR 50736 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'fileUploadUtil' defined in file [D:\MyWork\newWork\workspace\hm\bin\main\com\hm\mydata\common\utils\FileUploadUtil.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.hm.mydata.common.utils.FileUploadUtil]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	The declared package "kmds.com.framework.common.utils" does not match the expected package "com.hm.mydata.common.utils"
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	FileVo cannot be resolved to a type
+	The method upload(HttpServletRequest, MultipartFile[], String) from the type FileUploadUtil refers to the missing type FileVo
+	FileVo cannot be resolved to a type
+	FileVo cannot be resolved to a type
+	FileVo cannot be resolved to a type
+	The method emptyList() from the type Collections refers to the missing type FileVo
+	FileVo cannot be resolved to a type
+	FileVo cannot be resolved to a type
+	CustomException cannot be resolved to a type
+	ErrorCode cannot be resolved to a variable
+	CustomException cannot be resolved to a type
+	ErrorCode cannot be resolved to a variable
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1334) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1232) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.16.jar:5.3.16]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.16.jar:5.3.16]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:740) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:415) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1312) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301) ~[spring-boot-2.6.4.jar:2.6.4]
+	at com.hm.mydata.DemoApplication.main(DemoApplication.java:10) ~[main/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.6.4.jar:2.6.4]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.hm.mydata.common.utils.FileUploadUtil]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	The declared package "kmds.com.framework.common.utils" does not match the expected package "com.hm.mydata.common.utils"
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	FileVo cannot be resolved to a type
+	The method upload(HttpServletRequest, MultipartFile[], String) from the type FileUploadUtil refers to the missing type FileVo
+	FileVo cannot be resolved to a type
+	FileVo cannot be resolved to a type
+	FileVo cannot be resolved to a type
+	The method emptyList() from the type Collections refers to the missing type FileVo
+	FileVo cannot be resolved to a type
+	FileVo cannot be resolved to a type
+	CustomException cannot be resolved to a type
+	ErrorCode cannot be resolved to a variable
+	CustomException cannot be resolved to a type
+	ErrorCode cannot be resolved to a variable
+
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:224) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1326) ~[spring-beans-5.3.16.jar:5.3.16]
+	... 20 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problems: 
+	The declared package "kmds.com.framework.common.utils" does not match the expected package "com.hm.mydata.common.utils"
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	FileVo cannot be resolved to a type
+	The method upload(HttpServletRequest, MultipartFile[], String) from the type FileUploadUtil refers to the missing type FileVo
+	FileVo cannot be resolved to a type
+	FileVo cannot be resolved to a type
+	FileVo cannot be resolved to a type
+	The method emptyList() from the type Collections refers to the missing type FileVo
+	FileVo cannot be resolved to a type
+	FileVo cannot be resolved to a type
+	CustomException cannot be resolved to a type
+	ErrorCode cannot be resolved to a variable
+	CustomException cannot be resolved to a type
+	ErrorCode cannot be resolved to a variable
+
+	at com.hm.mydata.common.utils.FileUploadUtil.<init>(FileUploadUtil.java:1) ~[main/:na]
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483) ~[na:na]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:211) ~[spring-beans-5.3.16.jar:5.3.16]
+	... 22 common frames omitted
+
+2022-06-20 00:17:22.439  INFO 50736 --- [restartedMain] o.s.nativex.NativeListener               : AOT mode disabled
+2022-06-20 00:17:22.440  INFO 50736 --- [restartedMain] com.hm.mydata.DemoApplication            : Starting DemoApplication using Java 18 on DESKTOP-JT734OQ with PID 50736 (D:\MyWork\newWork\workspace\hm\bin\main started by 1iamm in D:\MyWork\newWork\workspace\hm)
+2022-06-20 00:17:22.440  INFO 50736 --- [restartedMain] com.hm.mydata.DemoApplication            : No active profile set, falling back to 1 default profile: "default"
+2022-06-20 00:17:22.603  INFO 50736 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-06-20 00:17:22.604  INFO 50736 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-20 00:17:22.604  INFO 50736 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-06-20 00:17:22.637  INFO 50736 --- [restartedMain] o.a.c.c.C.[Tomcat-5].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2022-06-20 00:17:22.637  INFO 50736 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 195 ms
+2022-06-20 00:17:22.662  WARN 50736 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'fileUploadUtil': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'kmds.image.save.dir' in value "${kmds.image.save.dir}"
+2022-06-20 00:17:22.663  INFO 50736 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-06-20 00:17:22.666  INFO 50736 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-06-20 00:17:22.669 ERROR 50736 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'fileUploadUtil': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'kmds.image.save.dir' in value "${kmds.image.save.dir}"
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:405) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.16.jar:5.3.16]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.16.jar:5.3.16]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:740) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:415) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1312) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301) ~[spring-boot-2.6.4.jar:2.6.4]
+	at com.hm.mydata.DemoApplication.main(DemoApplication.java:10) ~[main/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.6.4.jar:2.6.4]
+Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'kmds.image.save.dir' in value "${kmds.image.save.dir}"
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:180) ~[spring-core-5.3.16.jar:5.3.16]
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:126) ~[spring-core-5.3.16.jar:5.3.16]
+	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:239) ~[spring-core-5.3.16.jar:5.3.16]
+	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:210) ~[spring-core-5.3.16.jar:5.3.16]
+	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.lambda$processProperties$0(PropertySourcesPlaceholderConfigurer.java:191) ~[spring-context-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveEmbeddedValue(AbstractBeanFactory.java:936) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1330) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1309) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:656) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:639) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.3.16.jar:5.3.16]
+	... 20 common frames omitted
+
+2022-06-20 00:17:39.210  INFO 50736 --- [restartedMain] o.s.nativex.NativeListener               : AOT mode disabled
+2022-06-20 00:17:39.212  INFO 50736 --- [restartedMain] com.hm.mydata.DemoApplication            : Starting DemoApplication using Java 18 on DESKTOP-JT734OQ with PID 50736 (D:\MyWork\newWork\workspace\hm\bin\main started by 1iamm in D:\MyWork\newWork\workspace\hm)
+2022-06-20 00:17:39.212  INFO 50736 --- [restartedMain] com.hm.mydata.DemoApplication            : No active profile set, falling back to 1 default profile: "default"
+2022-06-20 00:17:39.377  INFO 50736 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-06-20 00:17:39.377  INFO 50736 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-20 00:17:39.377  INFO 50736 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-06-20 00:17:39.410  INFO 50736 --- [restartedMain] o.a.c.c.C.[Tomcat-6].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2022-06-20 00:17:39.410  INFO 50736 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 197 ms
+2022-06-20 00:17:39.505  WARN 50736 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-06-20 00:17:39.513  INFO 50736 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-06-20 00:17:39.516  INFO 50736 --- [restartedMain] com.hm.mydata.DemoApplication            : Started DemoApplication in 0.323 seconds (JVM running for 6892.827)
+2022-06-20 00:17:39.517  INFO 50736 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-06-20 00:17:44.115  INFO 50736 --- [restartedMain] o.s.nativex.NativeListener               : AOT mode disabled
+2022-06-20 00:17:44.117  INFO 50736 --- [restartedMain] com.hm.mydata.DemoApplication            : Starting DemoApplication using Java 18 on DESKTOP-JT734OQ with PID 50736 (D:\MyWork\newWork\workspace\hm\bin\main started by 1iamm in D:\MyWork\newWork\workspace\hm)
+2022-06-20 00:17:44.117  INFO 50736 --- [restartedMain] com.hm.mydata.DemoApplication            : No active profile set, falling back to 1 default profile: "default"
+2022-06-20 00:17:44.275  INFO 50736 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-06-20 00:17:44.276  INFO 50736 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-20 00:17:44.276  INFO 50736 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-06-20 00:17:44.307  INFO 50736 --- [restartedMain] o.a.c.c.C.[Tomcat-6].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2022-06-20 00:17:44.308  INFO 50736 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 190 ms
+2022-06-20 00:17:44.413  WARN 50736 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-06-20 00:17:44.422  INFO 50736 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-06-20 00:17:44.425  INFO 50736 --- [restartedMain] com.hm.mydata.DemoApplication            : Started DemoApplication in 0.323 seconds (JVM running for 6897.735)
+2022-06-20 00:17:44.426  INFO 50736 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-06-20 00:17:51.053  INFO 50736 --- [restartedMain] o.s.nativex.NativeListener               : AOT mode disabled
+2022-06-20 00:17:51.054  INFO 50736 --- [restartedMain] com.hm.mydata.DemoApplication            : Starting DemoApplication using Java 18 on DESKTOP-JT734OQ with PID 50736 (D:\MyWork\newWork\workspace\hm\bin\main started by 1iamm in D:\MyWork\newWork\workspace\hm)
+2022-06-20 00:17:51.055  INFO 50736 --- [restartedMain] com.hm.mydata.DemoApplication            : No active profile set, falling back to 1 default profile: "default"
+2022-06-20 00:17:51.210  INFO 50736 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-06-20 00:17:51.210  INFO 50736 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-20 00:17:51.210  INFO 50736 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-06-20 00:17:51.244  INFO 50736 --- [restartedMain] o.a.c.c.C.[Tomcat-6].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2022-06-20 00:17:51.244  INFO 50736 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 188 ms
+2022-06-20 00:17:51.348  WARN 50736 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-06-20 00:17:51.358  INFO 50736 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-06-20 00:17:51.361  INFO 50736 --- [restartedMain] com.hm.mydata.DemoApplication            : Started DemoApplication in 0.323 seconds (JVM running for 6904.671)
+2022-06-20 00:17:51.362  INFO 50736 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-06-20 00:18:20.132  INFO 50736 --- [restartedMain] o.s.nativex.NativeListener               : AOT mode disabled
+2022-06-20 00:18:20.133  INFO 50736 --- [restartedMain] com.hm.mydata.DemoApplication            : Starting DemoApplication using Java 18 on DESKTOP-JT734OQ with PID 50736 (D:\MyWork\newWork\workspace\hm\bin\main started by 1iamm in D:\MyWork\newWork\workspace\hm)
+2022-06-20 00:18:20.133  INFO 50736 --- [restartedMain] com.hm.mydata.DemoApplication            : No active profile set, falling back to 1 default profile: "default"
+2022-06-20 00:18:20.289  INFO 50736 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-06-20 00:18:20.290  INFO 50736 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-20 00:18:20.290  INFO 50736 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-06-20 00:18:20.322  INFO 50736 --- [restartedMain] o.a.c.c.C.[Tomcat-6].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2022-06-20 00:18:20.322  INFO 50736 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 187 ms
+2022-06-20 00:18:20.426  WARN 50736 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-06-20 00:18:20.433  INFO 50736 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-06-20 00:18:20.436  INFO 50736 --- [restartedMain] com.hm.mydata.DemoApplication            : Started DemoApplication in 0.319 seconds (JVM running for 6933.746)
+2022-06-20 00:18:20.437  INFO 50736 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-06-20 00:18:43.038  INFO 50736 --- [restartedMain] o.s.nativex.NativeListener               : AOT mode disabled
+2022-06-20 00:18:43.040  INFO 50736 --- [restartedMain] com.hm.mydata.DemoApplication            : Starting DemoApplication using Java 18 on DESKTOP-JT734OQ with PID 50736 (D:\MyWork\newWork\workspace\hm\bin\main started by 1iamm in D:\MyWork\newWork\workspace\hm)
+2022-06-20 00:18:43.040  INFO 50736 --- [restartedMain] com.hm.mydata.DemoApplication            : No active profile set, falling back to 1 default profile: "default"
+2022-06-20 00:18:43.195  INFO 50736 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-06-20 00:18:43.196  INFO 50736 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-20 00:18:43.196  INFO 50736 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-06-20 00:18:43.228  INFO 50736 --- [restartedMain] o.a.c.c.C.[Tomcat-6].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2022-06-20 00:18:43.228  INFO 50736 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 187 ms
+2022-06-20 00:18:43.331  WARN 50736 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-06-20 00:18:43.339  INFO 50736 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-06-20 00:18:43.342  INFO 50736 --- [restartedMain] com.hm.mydata.DemoApplication            : Started DemoApplication in 0.319 seconds (JVM running for 6956.652)
+2022-06-20 00:18:43.343  INFO 50736 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-06-20 00:18:57.004  INFO 50736 --- [restartedMain] o.s.nativex.NativeListener               : AOT mode disabled
+2022-06-20 00:18:57.005  INFO 50736 --- [restartedMain] com.hm.mydata.DemoApplication            : Starting DemoApplication using Java 18 on DESKTOP-JT734OQ with PID 50736 (D:\MyWork\newWork\workspace\hm\bin\main started by 1iamm in D:\MyWork\newWork\workspace\hm)
+2022-06-20 00:18:57.005  INFO 50736 --- [restartedMain] com.hm.mydata.DemoApplication            : No active profile set, falling back to 1 default profile: "default"
+2022-06-20 00:18:57.161  INFO 50736 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-06-20 00:18:57.161  INFO 50736 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-20 00:18:57.161  INFO 50736 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-06-20 00:18:57.193  INFO 50736 --- [restartedMain] o.a.c.c.C.[Tomcat-6].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2022-06-20 00:18:57.193  INFO 50736 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 187 ms
+2022-06-20 00:18:57.300  WARN 50736 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-06-20 00:18:57.308  INFO 50736 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-06-20 00:18:57.311  INFO 50736 --- [restartedMain] com.hm.mydata.DemoApplication            : Started DemoApplication in 0.323 seconds (JVM running for 6970.621)
+2022-06-20 00:18:57.312  INFO 50736 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-06-20 00:19:57.278  INFO 50736 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat-6].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-20 00:19:57.278  INFO 50736 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-06-20 00:19:57.279  INFO 50736 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-06-20 00:19:57.322  INFO 50736 --- [reactor-http-nio-2] c.hm.mydata.md.service.WebClientService  : else :: [Location:"offerureeeel", Content-Type:"application/json", Transfer-Encoding:"chunked", Date:"Sun, 19 Jun 2022 15:19:57 GMT", Connection:"close"]
+2022-06-20 00:19:57.324  INFO 50736 --- [http-nio-8080-exec-2] c.hm.mydata.md.service.WebClientService  : END
+2022-06-20 00:19:57.324  INFO 50736 --- [http-nio-8080-exec-2] c.hm.mydata.md.service.WebClientService  : resVOCertResVO(org_code=A1AAER0000, install_url_android=HTTP, app_scheme_android=ERKSE, app_scheme_iOS=IOS APPSCHEM, install_url_iOS=IOS URL, code=null, state=null, api_tran_id=null, error=400, error_description=invalid request)
