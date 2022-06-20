@@ -5194,3 +5194,461 @@ Caused by: java.lang.ClassNotFoundException: MdB005CommonReqVO
 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521) ~[na:na]
 	... 30 common frames omitted
 
+2022-06-21 01:48:29.493  INFO 29280 --- [restartedMain] o.s.nativex.NativeListener               : AOT mode disabled
+2022-06-21 01:48:29.549  INFO 29280 --- [restartedMain] com.hm.mydata.DemoApplication            : Starting DemoApplication using Java 18 on DESKTOP-JT734OQ with PID 29280 (D:\MyWork\newWork\workspace\demo\bin\main started by 1iamm in D:\MyWork\newWork\workspace\demo)
+2022-06-21 01:48:29.550  INFO 29280 --- [restartedMain] com.hm.mydata.DemoApplication            : No active profile set, falling back to 1 default profile: "default"
+2022-06-21 01:48:29.589  INFO 29280 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\1iamm\.gradle\caches\modules-2\files-2.1\com.oracle.database.jdbc\ojdbc8\21.3.0.0\73649ab9bfb94daa4df21b80c98ac35aea4aa2f5\ojdbc8-21.3.0.0.jar referenced one or more files that do not exist: file:/C:/Users/1iamm/.gradle/caches/modules-2/files-2.1/com.oracle.database.jdbc/ojdbc8/21.3.0.0/73649ab9bfb94daa4df21b80c98ac35aea4aa2f5/oraclepki.jar
+2022-06-21 01:48:29.590  INFO 29280 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-06-21 01:48:29.590  INFO 29280 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-06-21 01:48:30.617  INFO 29280 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-06-21 01:48:30.626  INFO 29280 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-21 01:48:30.626  INFO 29280 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-06-21 01:48:30.729  INFO 29280 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-06-21 01:48:30.730  INFO 29280 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1140 ms
+2022-06-21 01:48:31.542  WARN 29280 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-06-21 01:48:31.568  INFO 29280 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-06-21 01:48:31.578  INFO 29280 --- [restartedMain] com.hm.mydata.DemoApplication            : Started DemoApplication in 2.374 seconds (JVM running for 3.139)
+2022-06-21 01:54:23.569  INFO 29280 --- [restartedMain] o.s.nativex.NativeListener               : AOT mode disabled
+2022-06-21 01:54:23.572  INFO 29280 --- [restartedMain] com.hm.mydata.DemoApplication            : Starting DemoApplication using Java 18 on DESKTOP-JT734OQ with PID 29280 (D:\MyWork\newWork\workspace\demo\bin\main started by 1iamm in D:\MyWork\newWork\workspace\demo)
+2022-06-21 01:54:23.572  INFO 29280 --- [restartedMain] com.hm.mydata.DemoApplication            : No active profile set, falling back to 1 default profile: "default"
+2022-06-21 01:54:23.834  INFO 29280 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-06-21 01:54:23.835  INFO 29280 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-21 01:54:23.836  INFO 29280 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-06-21 01:54:23.872  INFO 29280 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-06-21 01:54:23.872  INFO 29280 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 297 ms
+2022-06-21 01:54:23.914  WARN 29280 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mjK001Controller': Resolution of declared constructors on bean Class [com.hm.mydata.md.controller.MjK001Controller] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@7d73f774] failed; nested exception is java.lang.NoClassDefFoundError: MjK001ServiceImpl
+2022-06-21 01:54:23.914  INFO 29280 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-06-21 01:54:23.919  INFO 29280 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-06-21 01:54:23.938 ERROR 29280 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mjK001Controller': Resolution of declared constructors on bean Class [com.hm.mydata.md.controller.MjK001Controller] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@7d73f774] failed; nested exception is java.lang.NoClassDefFoundError: MjK001ServiceImpl
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:309) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineConstructorsFromBeanPostProcessors(AbstractAutowireCapableBeanFactory.java:1302) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1219) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.16.jar:5.3.16]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.16.jar:5.3.16]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:740) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:415) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1312) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301) ~[spring-boot-2.6.4.jar:2.6.4]
+	at com.hm.mydata.DemoApplication.main(DemoApplication.java:10) ~[main/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.6.4.jar:2.6.4]
+Caused by: java.lang.NoClassDefFoundError: MjK001ServiceImpl
+	at java.base/java.lang.Class.getDeclaredConstructors0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.privateGetDeclaredConstructors(Class.java:3405) ~[na:na]
+	at java.base/java.lang.Class.getDeclaredConstructors(Class.java:2587) ~[na:na]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:304) ~[spring-beans-5.3.16.jar:5.3.16]
+	... 21 common frames omitted
+Caused by: java.lang.ClassNotFoundException: MjK001ServiceImpl
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521) ~[na:na]
+	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:488) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:467) ~[na:na]
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:145) ~[spring-boot-devtools-2.6.4.jar:2.6.4]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521) ~[na:na]
+	... 25 common frames omitted
+
+2022-06-21 01:54:28.464  INFO 29280 --- [restartedMain] o.s.nativex.NativeListener               : AOT mode disabled
+2022-06-21 01:54:28.466  INFO 29280 --- [restartedMain] com.hm.mydata.DemoApplication            : Starting DemoApplication using Java 18 on DESKTOP-JT734OQ with PID 29280 (D:\MyWork\newWork\workspace\demo\bin\main started by 1iamm in D:\MyWork\newWork\workspace\demo)
+2022-06-21 01:54:28.466  INFO 29280 --- [restartedMain] com.hm.mydata.DemoApplication            : No active profile set, falling back to 1 default profile: "default"
+2022-06-21 01:54:28.686  INFO 29280 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-06-21 01:54:28.687  INFO 29280 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-21 01:54:28.687  INFO 29280 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-06-21 01:54:28.724  INFO 29280 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2022-06-21 01:54:28.724  INFO 29280 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 256 ms
+2022-06-21 01:54:28.758  WARN 29280 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mjK001Controller': Resolution of declared constructors on bean Class [com.hm.mydata.md.controller.MjK001Controller] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@1615399d] failed; nested exception is java.lang.NoClassDefFoundError: MjK001ServiceImpl
+2022-06-21 01:54:28.759  INFO 29280 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-06-21 01:54:28.762  INFO 29280 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-06-21 01:54:28.766 ERROR 29280 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mjK001Controller': Resolution of declared constructors on bean Class [com.hm.mydata.md.controller.MjK001Controller] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@1615399d] failed; nested exception is java.lang.NoClassDefFoundError: MjK001ServiceImpl
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:309) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineConstructorsFromBeanPostProcessors(AbstractAutowireCapableBeanFactory.java:1302) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1219) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.16.jar:5.3.16]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.16.jar:5.3.16]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:740) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:415) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1312) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301) ~[spring-boot-2.6.4.jar:2.6.4]
+	at com.hm.mydata.DemoApplication.main(DemoApplication.java:10) ~[main/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.6.4.jar:2.6.4]
+Caused by: java.lang.NoClassDefFoundError: MjK001ServiceImpl
+	at java.base/java.lang.Class.getDeclaredConstructors0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.privateGetDeclaredConstructors(Class.java:3405) ~[na:na]
+	at java.base/java.lang.Class.getDeclaredConstructors(Class.java:2587) ~[na:na]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:304) ~[spring-beans-5.3.16.jar:5.3.16]
+	... 21 common frames omitted
+Caused by: java.lang.ClassNotFoundException: MjK001ServiceImpl
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521) ~[na:na]
+	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:488) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:467) ~[na:na]
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:145) ~[spring-boot-devtools-2.6.4.jar:2.6.4]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521) ~[na:na]
+	... 25 common frames omitted
+
+2022-06-21 01:55:01.903  INFO 29280 --- [restartedMain] o.s.nativex.NativeListener               : AOT mode disabled
+2022-06-21 01:55:01.904  INFO 29280 --- [restartedMain] com.hm.mydata.DemoApplication            : Starting DemoApplication using Java 18 on DESKTOP-JT734OQ with PID 29280 (D:\MyWork\newWork\workspace\demo\bin\main started by 1iamm in D:\MyWork\newWork\workspace\demo)
+2022-06-21 01:55:01.905  INFO 29280 --- [restartedMain] com.hm.mydata.DemoApplication            : No active profile set, falling back to 1 default profile: "default"
+2022-06-21 01:55:02.098  INFO 29280 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-06-21 01:55:02.098  INFO 29280 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-21 01:55:02.098  INFO 29280 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-06-21 01:55:02.134  INFO 29280 --- [restartedMain] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2022-06-21 01:55:02.134  INFO 29280 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 227 ms
+2022-06-21 01:55:02.169  WARN 29280 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mjK001ServiceImpl': Lookup method resolution failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [com.hm.mydata.md.service.MjK001ServiceImpl] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@101e779a]
+2022-06-21 01:55:02.170  INFO 29280 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-06-21 01:55:02.173  INFO 29280 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-06-21 01:55:02.177 ERROR 29280 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mjK001ServiceImpl': Lookup method resolution failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [com.hm.mydata.md.service.MjK001ServiceImpl] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@101e779a]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:289) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineConstructorsFromBeanPostProcessors(AbstractAutowireCapableBeanFactory.java:1302) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1219) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.16.jar:5.3.16]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.16.jar:5.3.16]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:740) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:415) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1312) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301) ~[spring-boot-2.6.4.jar:2.6.4]
+	at com.hm.mydata.DemoApplication.main(DemoApplication.java:10) ~[main/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.6.4.jar:2.6.4]
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.hm.mydata.md.service.MjK001ServiceImpl] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@101e779a]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:485) ~[spring-core-5.3.16.jar:5.3.16]
+	at org.springframework.util.ReflectionUtils.doWithLocalMethods(ReflectionUtils.java:321) ~[spring-core-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:267) ~[spring-beans-5.3.16.jar:5.3.16]
+	... 21 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: MjK004ResVO
+	at java.base/java.lang.Class.getDeclaredMethods0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3434) ~[na:na]
+	at java.base/java.lang.Class.getDeclaredMethods(Class.java:2536) ~[na:na]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:467) ~[spring-core-5.3.16.jar:5.3.16]
+	... 23 common frames omitted
+Caused by: java.lang.ClassNotFoundException: MjK004ResVO
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521) ~[na:na]
+	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:488) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:467) ~[na:na]
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:145) ~[spring-boot-devtools-2.6.4.jar:2.6.4]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521) ~[na:na]
+	... 27 common frames omitted
+
+2022-06-21 01:55:30.197  INFO 29280 --- [restartedMain] o.s.nativex.NativeListener               : AOT mode disabled
+2022-06-21 01:55:30.198  INFO 29280 --- [restartedMain] com.hm.mydata.DemoApplication            : Starting DemoApplication using Java 18 on DESKTOP-JT734OQ with PID 29280 (D:\MyWork\newWork\workspace\demo\bin\main started by 1iamm in D:\MyWork\newWork\workspace\demo)
+2022-06-21 01:55:30.199  INFO 29280 --- [restartedMain] com.hm.mydata.DemoApplication            : No active profile set, falling back to 1 default profile: "default"
+2022-06-21 01:55:30.392  INFO 29280 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-06-21 01:55:30.393  INFO 29280 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-21 01:55:30.393  INFO 29280 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-06-21 01:55:30.430  INFO 29280 --- [restartedMain] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2022-06-21 01:55:30.430  INFO 29280 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 230 ms
+2022-06-21 01:55:30.465  WARN 29280 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mjK001ServiceImpl' defined in file [D:\MyWork\newWork\workspace\demo\bin\main\com\hm\mydata\md\service\MjK001ServiceImpl.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.hm.mydata.md.service.MjK001ServiceImpl]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	The declared package "kmds.mj.k.service" does not match the expected package "com.hm.mydata.md.service"
+	The import com.google cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+
+2022-06-21 01:55:30.465  INFO 29280 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-06-21 01:55:30.469  INFO 29280 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-06-21 01:55:30.472 ERROR 29280 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mjK001ServiceImpl' defined in file [D:\MyWork\newWork\workspace\demo\bin\main\com\hm\mydata\md\service\MjK001ServiceImpl.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.hm.mydata.md.service.MjK001ServiceImpl]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	The declared package "kmds.mj.k.service" does not match the expected package "com.hm.mydata.md.service"
+	The import com.google cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1334) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1232) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.16.jar:5.3.16]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.16.jar:5.3.16]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:740) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:415) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1312) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301) ~[spring-boot-2.6.4.jar:2.6.4]
+	at com.hm.mydata.DemoApplication.main(DemoApplication.java:10) ~[main/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.6.4.jar:2.6.4]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.hm.mydata.md.service.MjK001ServiceImpl]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	The declared package "kmds.mj.k.service" does not match the expected package "com.hm.mydata.md.service"
+	The import com.google cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:224) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1326) ~[spring-beans-5.3.16.jar:5.3.16]
+	... 20 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problems: 
+	The declared package "kmds.mj.k.service" does not match the expected package "com.hm.mydata.md.service"
+	The import com.google cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+	The import kmds cannot be resolved
+
+	at com.hm.mydata.md.service.MjK001ServiceImpl.<init>(MjK001ServiceImpl.java:1) ~[main/:na]
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483) ~[na:na]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:211) ~[spring-beans-5.3.16.jar:5.3.16]
+	... 22 common frames omitted
+
+2022-06-21 01:55:35.011  INFO 29280 --- [restartedMain] o.s.nativex.NativeListener               : AOT mode disabled
+2022-06-21 01:55:35.013  INFO 29280 --- [restartedMain] com.hm.mydata.DemoApplication            : Starting DemoApplication using Java 18 on DESKTOP-JT734OQ with PID 29280 (D:\MyWork\newWork\workspace\demo\bin\main started by 1iamm in D:\MyWork\newWork\workspace\demo)
+2022-06-21 01:55:35.014  INFO 29280 --- [restartedMain] com.hm.mydata.DemoApplication            : No active profile set, falling back to 1 default profile: "default"
+2022-06-21 01:55:35.210  INFO 29280 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-06-21 01:55:35.210  INFO 29280 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-21 01:55:35.211  INFO 29280 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-06-21 01:55:35.246  INFO 29280 --- [restartedMain] o.a.c.c.C.[Tomcat-4].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2022-06-21 01:55:35.246  INFO 29280 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 230 ms
+2022-06-21 01:55:35.405  WARN 29280 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-06-21 01:55:35.417  INFO 29280 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-06-21 01:55:35.420  INFO 29280 --- [restartedMain] com.hm.mydata.DemoApplication            : Started DemoApplication in 0.428 seconds (JVM running for 426.982)
+2022-06-21 01:55:35.422  INFO 29280 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-06-21 01:55:43.134  INFO 29280 --- [restartedMain] o.s.nativex.NativeListener               : AOT mode disabled
+2022-06-21 01:55:43.136  INFO 29280 --- [restartedMain] com.hm.mydata.DemoApplication            : Starting DemoApplication using Java 18 on DESKTOP-JT734OQ with PID 29280 (D:\MyWork\newWork\workspace\demo\bin\main started by 1iamm in D:\MyWork\newWork\workspace\demo)
+2022-06-21 01:55:43.136  INFO 29280 --- [restartedMain] com.hm.mydata.DemoApplication            : No active profile set, falling back to 1 default profile: "default"
+2022-06-21 01:55:43.328  INFO 29280 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-06-21 01:55:43.329  INFO 29280 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-21 01:55:43.329  INFO 29280 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-06-21 01:55:43.364  INFO 29280 --- [restartedMain] o.a.c.c.C.[Tomcat-4].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2022-06-21 01:55:43.364  INFO 29280 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 227 ms
+2022-06-21 01:55:43.487  WARN 29280 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-06-21 01:55:43.496  INFO 29280 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-06-21 01:55:43.500  INFO 29280 --- [restartedMain] com.hm.mydata.DemoApplication            : Started DemoApplication in 0.385 seconds (JVM running for 435.06)
+2022-06-21 01:55:43.501  INFO 29280 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-06-21 01:56:30.053  INFO 29280 --- [restartedMain] o.s.nativex.NativeListener               : AOT mode disabled
+2022-06-21 01:56:30.055  INFO 29280 --- [restartedMain] com.hm.mydata.DemoApplication            : Starting DemoApplication using Java 18 on DESKTOP-JT734OQ with PID 29280 (D:\MyWork\newWork\workspace\demo\bin\main started by 1iamm in D:\MyWork\newWork\workspace\demo)
+2022-06-21 01:56:30.055  INFO 29280 --- [restartedMain] com.hm.mydata.DemoApplication            : No active profile set, falling back to 1 default profile: "default"
+2022-06-21 01:56:30.242  INFO 29280 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-06-21 01:56:30.243  INFO 29280 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-21 01:56:30.243  INFO 29280 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-06-21 01:56:30.279  INFO 29280 --- [restartedMain] o.a.c.c.C.[Tomcat-4].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2022-06-21 01:56:30.279  INFO 29280 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 223 ms
+2022-06-21 01:56:30.312  WARN 29280 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mjCommonController': Lookup method resolution failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [com.hm.mydata.md.controller.MjCommonController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@152dd325]
+2022-06-21 01:56:30.312  INFO 29280 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-06-21 01:56:30.315  INFO 29280 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-06-21 01:56:30.319 ERROR 29280 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mjCommonController': Lookup method resolution failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [com.hm.mydata.md.controller.MjCommonController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@152dd325]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:289) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineConstructorsFromBeanPostProcessors(AbstractAutowireCapableBeanFactory.java:1302) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1219) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.16.jar:5.3.16]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.16.jar:5.3.16]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:740) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:415) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1312) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301) ~[spring-boot-2.6.4.jar:2.6.4]
+	at com.hm.mydata.DemoApplication.main(DemoApplication.java:10) ~[main/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.6.4.jar:2.6.4]
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.hm.mydata.md.controller.MjCommonController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@152dd325]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:485) ~[spring-core-5.3.16.jar:5.3.16]
+	at org.springframework.util.ReflectionUtils.doWithLocalMethods(ReflectionUtils.java:321) ~[spring-core-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:267) ~[spring-beans-5.3.16.jar:5.3.16]
+	... 21 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: MjCommonReqVO
+	at java.base/java.lang.Class.getDeclaredMethods0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3434) ~[na:na]
+	at java.base/java.lang.Class.getDeclaredMethods(Class.java:2536) ~[na:na]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:467) ~[spring-core-5.3.16.jar:5.3.16]
+	... 23 common frames omitted
+Caused by: java.lang.ClassNotFoundException: MjCommonReqVO
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521) ~[na:na]
+	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:488) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:467) ~[na:na]
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:145) ~[spring-boot-devtools-2.6.4.jar:2.6.4]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521) ~[na:na]
+	... 27 common frames omitted
+
