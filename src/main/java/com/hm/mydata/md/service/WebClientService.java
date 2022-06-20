@@ -137,6 +137,36 @@ public class WebClientService {
 		return ress;
 		
 	}
+	
+	public ResponseEntity<?> postApiCall(String apiUri, MultiValueMap<String, String> headerMap, MultiValueMap<String, String> paramMap) {
+
+		Consumer<HttpHeaders> headers = v -> v.addAll(headerMap);
+		WebClient wc = wcc.apiClient(WebClient.builder());
+		ResponseEntity<?> ress = wc.post()
+				              .uri(ub -> ub.path("/oauth/2.0/authorize")
+				                            .queryParams(paramMap).build())
+				              .headers(headers)
+				              .exchangeToMono(res -> {
+				            	  if (res.statusCode().equals(HttpStatus.FOUND) || res.statusCode().equals(HttpStatus.OK)) {
+				            		  log.info("302, 200 응답 웹방식 응답");
+				            		  
+				            		  return res.toEntity(CertResVO.class);
+				            	  } else {
+				            		  log.info("else :: " + res.headers().asHttpHeaders().toString());
+				            		  return res.toEntity(CertResVO.class);
+				            	  }
+				              })
+				              .onErrorResume(err -> {
+				            	  log.info("ba!!");
+				            	  log.info("onErrorResume ::" + err.getMessage());
+				            	  throw new WebClientRequestException(err, null, null, null);
+				              })
+				              .block();
+				               
+		log.info("END");     
+		return ress;
+		
+	}
 
 	
 }
