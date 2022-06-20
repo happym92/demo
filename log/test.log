@@ -651,3 +651,187 @@ Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'km
 2022-06-20 00:19:57.322  INFO 50736 --- [reactor-http-nio-2] c.hm.mydata.md.service.WebClientService  : else :: [Location:"offerureeeel", Content-Type:"application/json", Transfer-Encoding:"chunked", Date:"Sun, 19 Jun 2022 15:19:57 GMT", Connection:"close"]
 2022-06-20 00:19:57.324  INFO 50736 --- [http-nio-8080-exec-2] c.hm.mydata.md.service.WebClientService  : END
 2022-06-20 00:19:57.324  INFO 50736 --- [http-nio-8080-exec-2] c.hm.mydata.md.service.WebClientService  : resVOCertResVO(org_code=A1AAER0000, install_url_android=HTTP, app_scheme_android=ERKSE, app_scheme_iOS=IOS APPSCHEM, install_url_iOS=IOS URL, code=null, state=null, api_tran_id=null, error=400, error_description=invalid request)
+2022-06-20 12:35:57.038  INFO 11452 --- [restartedMain] o.s.nativex.NativeListener               : AOT mode disabled
+2022-06-20 12:35:57.262  INFO 11452 --- [restartedMain] com.hm.mydata.DemoApplication            : Starting DemoApplication using Java 17.0.2 on DESKTOP-0D78BFJ with PID 11452 (C:\zzic-oyo\workspace\demo\bin\main started by 1iamm in C:\zzic-oyo\workspace\demo)
+2022-06-20 12:35:57.264  INFO 11452 --- [restartedMain] com.hm.mydata.DemoApplication            : No active profile set, falling back to 1 default profile: "default"
+2022-06-20 12:35:57.514  INFO 11452 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\1iamm\.gradle\caches\modules-2\files-2.1\com.oracle.database.jdbc\ojdbc8\21.3.0.0\73649ab9bfb94daa4df21b80c98ac35aea4aa2f5\ojdbc8-21.3.0.0.jar referenced one or more files that do not exist: file:/C:/Users/1iamm/.gradle/caches/modules-2/files-2.1/com.oracle.database.jdbc/ojdbc8/21.3.0.0/73649ab9bfb94daa4df21b80c98ac35aea4aa2f5/oraclepki.jar
+2022-06-20 12:35:57.515  INFO 11452 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-06-20 12:35:57.516  INFO 11452 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-06-20 12:36:00.934  INFO 11452 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-06-20 12:36:00.966  INFO 11452 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-20 12:36:00.968  INFO 11452 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-06-20 12:36:01.428  INFO 11452 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-06-20 12:36:01.434  INFO 11452 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3916 ms
+2022-06-20 12:36:03.011  WARN 11452 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'simpleApiClient' defined in file [C:\zzic-oyo\workspace\demo\bin\main\com\hm\mydata\md\service\SimpleApiClient.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoUniqueBeanDefinitionException: No qualifying bean of type 'org.springframework.web.reactive.function.client.WebClient' available: expected single matching bean but found 3: webClientFromScratch,stockApiClient,apiClient
+2022-06-20 12:36:03.019  INFO 11452 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-06-20 12:36:03.048  INFO 11452 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-06-20 12:36:03.127 ERROR 11452 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.hm.mydata.md.service.SimpleApiClient required a single bean, but 3 were found:
+	- webClientFromScratch: defined by method 'webClientFromScratch' in class path resource [com/hm/mydata/common/config/SimpleWebClientConfiguration.class]
+	- stockApiClient: defined by method 'stockApiClient' in class path resource [com/hm/mydata/common/config/WebClientConfig.class]
+	- apiClient: defined by method 'apiClient' in class path resource [com/hm/mydata/common/config/WebClientConfig.class]
+
+
+Action:
+
+Consider marking one of the beans as @Primary, updating the consumer to accept multiple beans, or using @Qualifier to identify the bean that should be consumed
+
+2022-06-20 12:37:25.633  INFO 15684 --- [restartedMain] o.s.nativex.NativeListener               : AOT mode disabled
+2022-06-20 12:37:25.881  INFO 15684 --- [restartedMain] com.hm.mydata.DemoApplication            : Starting DemoApplication using Java 17.0.2 on DESKTOP-0D78BFJ with PID 15684 (C:\zzic-oyo\workspace\demo\bin\main started by 1iamm in C:\zzic-oyo\workspace\demo)
+2022-06-20 12:37:25.884  INFO 15684 --- [restartedMain] com.hm.mydata.DemoApplication            : No active profile set, falling back to 1 default profile: "default"
+2022-06-20 12:37:26.050  INFO 15684 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\1iamm\.gradle\caches\modules-2\files-2.1\com.oracle.database.jdbc\ojdbc8\21.3.0.0\73649ab9bfb94daa4df21b80c98ac35aea4aa2f5\ojdbc8-21.3.0.0.jar referenced one or more files that do not exist: file:/C:/Users/1iamm/.gradle/caches/modules-2/files-2.1/com.oracle.database.jdbc/ojdbc8/21.3.0.0/73649ab9bfb94daa4df21b80c98ac35aea4aa2f5/oraclepki.jar
+2022-06-20 12:37:26.051  INFO 15684 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-06-20 12:37:26.051  INFO 15684 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-06-20 12:37:28.979  INFO 15684 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-06-20 12:37:29.006  INFO 15684 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-20 12:37:29.008  INFO 15684 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-06-20 12:37:29.309  INFO 15684 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-06-20 12:37:29.310  INFO 15684 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3257 ms
+2022-06-20 12:37:29.427  WARN 15684 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'baseController': Unsatisfied dependency expressed through field 'wcc'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.hm.mydata.common.config.WebClientConfig' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2022-06-20 12:37:29.433  INFO 15684 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-06-20 12:37:29.459  INFO 15684 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-06-20 12:37:29.520 ERROR 15684 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field wcc in com.hm.mydata.base.controller.BaseController required a bean of type 'com.hm.mydata.common.config.WebClientConfig' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.hm.mydata.common.config.WebClientConfig' in your configuration.
+
+2022-06-20 12:39:31.555  INFO 19428 --- [restartedMain] o.s.nativex.NativeListener               : AOT mode disabled
+2022-06-20 12:39:31.751  INFO 19428 --- [restartedMain] com.hm.mydata.DemoApplication            : Starting DemoApplication using Java 17.0.2 on DESKTOP-0D78BFJ with PID 19428 (C:\zzic-oyo\workspace\demo\bin\main started by 1iamm in C:\zzic-oyo\workspace\demo)
+2022-06-20 12:39:31.753  INFO 19428 --- [restartedMain] com.hm.mydata.DemoApplication            : No active profile set, falling back to 1 default profile: "default"
+2022-06-20 12:39:31.892  INFO 19428 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\1iamm\.gradle\caches\modules-2\files-2.1\com.oracle.database.jdbc\ojdbc8\21.3.0.0\73649ab9bfb94daa4df21b80c98ac35aea4aa2f5\ojdbc8-21.3.0.0.jar referenced one or more files that do not exist: file:/C:/Users/1iamm/.gradle/caches/modules-2/files-2.1/com.oracle.database.jdbc/ojdbc8/21.3.0.0/73649ab9bfb94daa4df21b80c98ac35aea4aa2f5/oraclepki.jar
+2022-06-20 12:39:31.893  INFO 19428 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-06-20 12:39:31.894  INFO 19428 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-06-20 12:39:34.747  INFO 19428 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-06-20 12:39:34.777  INFO 19428 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-20 12:39:34.778  INFO 19428 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-06-20 12:39:35.063  INFO 19428 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-06-20 12:39:35.064  INFO 19428 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3169 ms
+2022-06-20 12:39:36.146  WARN 19428 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'simpleApiClient' defined in file [C:\zzic-oyo\workspace\demo\bin\main\com\hm\mydata\md\service\SimpleApiClient.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoUniqueBeanDefinitionException: No qualifying bean of type 'org.springframework.web.reactive.function.client.WebClient' available: expected single matching bean but found 2: stockApiClient,apiClient
+2022-06-20 12:39:36.152  INFO 19428 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-06-20 12:39:36.175  INFO 19428 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-06-20 12:39:36.240 ERROR 19428 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.hm.mydata.md.service.SimpleApiClient required a single bean, but 2 were found:
+	- stockApiClient: defined by method 'stockApiClient' in class path resource [com/hm/mydata/common/config/WebClientConfig.class]
+	- apiClient: defined by method 'apiClient' in class path resource [com/hm/mydata/common/config/WebClientConfig.class]
+
+
+Action:
+
+Consider marking one of the beans as @Primary, updating the consumer to accept multiple beans, or using @Qualifier to identify the bean that should be consumed
+
+2022-06-20 12:40:20.687  INFO 22100 --- [restartedMain] o.s.nativex.NativeListener               : AOT mode disabled
+2022-06-20 12:40:20.935  INFO 22100 --- [restartedMain] com.hm.mydata.DemoApplication            : Starting DemoApplication using Java 17.0.2 on DESKTOP-0D78BFJ with PID 22100 (C:\zzic-oyo\workspace\demo\bin\main started by 1iamm in C:\zzic-oyo\workspace\demo)
+2022-06-20 12:40:20.937  INFO 22100 --- [restartedMain] com.hm.mydata.DemoApplication            : No active profile set, falling back to 1 default profile: "default"
+2022-06-20 12:40:21.101  INFO 22100 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\1iamm\.gradle\caches\modules-2\files-2.1\com.oracle.database.jdbc\ojdbc8\21.3.0.0\73649ab9bfb94daa4df21b80c98ac35aea4aa2f5\ojdbc8-21.3.0.0.jar referenced one or more files that do not exist: file:/C:/Users/1iamm/.gradle/caches/modules-2/files-2.1/com.oracle.database.jdbc/ojdbc8/21.3.0.0/73649ab9bfb94daa4df21b80c98ac35aea4aa2f5/oraclepki.jar
+2022-06-20 12:40:21.102  INFO 22100 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-06-20 12:40:21.103  INFO 22100 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-06-20 12:40:24.043  INFO 22100 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-06-20 12:40:24.068  INFO 22100 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-20 12:40:24.069  INFO 22100 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-06-20 12:40:24.334  INFO 22100 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-06-20 12:40:24.335  INFO 22100 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3230 ms
+2022-06-20 12:40:26.682  WARN 22100 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-06-20 12:40:26.747  INFO 22100 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-06-20 12:40:26.788  INFO 22100 --- [restartedMain] com.hm.mydata.DemoApplication            : Started DemoApplication in 7.341 seconds (JVM running for 10.425)
+2022-06-20 12:40:31.166  INFO 22100 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-20 12:40:31.167  INFO 22100 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-06-20 12:40:31.169  INFO 22100 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-06-20 12:40:32.437  INFO 22100 --- [reactor-http-nio-2] c.hm.mydata.md.service.WebClientService  : else :: [Location:"offerureeeel", Content-Type:"application/json", Transfer-Encoding:"chunked", Date:"Mon, 20 Jun 2022 03:40:32 GMT", Connection:"close"]
+2022-06-20 12:40:32.699  INFO 22100 --- [http-nio-8080-exec-1] c.hm.mydata.md.service.WebClientService  : END
+2022-06-20 12:40:32.700  INFO 22100 --- [http-nio-8080-exec-1] c.hm.mydata.md.service.WebClientService  : resVOCertResVO(org_code=A1AAER0000, install_url_android=HTTP, app_scheme_android=ERKSE, app_scheme_iOS=IOS APPSCHEM, install_url_iOS=IOS URL, code=null, state=null, api_tran_id=null, error=400, error_description=invalid request)
+2022-06-20 12:42:05.390  INFO 22100 --- [reactor-http-nio-3] c.hm.mydata.md.service.WebClientService  : else :: [Location:"offerureeeel", Content-Type:"application/json", Transfer-Encoding:"chunked", Date:"Mon, 20 Jun 2022 03:42:05 GMT", Connection:"close"]
+2022-06-20 12:42:05.393  INFO 22100 --- [http-nio-8080-exec-5] c.hm.mydata.md.service.WebClientService  : END
+2022-06-20 12:42:05.393  INFO 22100 --- [http-nio-8080-exec-5] c.hm.mydata.md.service.WebClientService  : resVOCertResVO(org_code=A1AAER0000, install_url_android=HTTP, app_scheme_android=ERKSE, app_scheme_iOS=IOS APPSCHEM, install_url_iOS=IOS URL, code=null, state=null, api_tran_id=null, error=400, error_description=invalid request)
+2022-06-20 12:42:22.325  INFO 22100 --- [RMI TCP Connection(9)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2022-06-20 12:42:30.507  INFO 6068 --- [restartedMain] o.s.nativex.NativeListener               : AOT mode disabled
+2022-06-20 12:42:30.723  INFO 6068 --- [restartedMain] com.hm.mydata.DemoApplication            : Starting DemoApplication using Java 17.0.2 on DESKTOP-0D78BFJ with PID 6068 (C:\zzic-oyo\workspace\demo\bin\main started by 1iamm in C:\zzic-oyo\workspace\demo)
+2022-06-20 12:42:30.724  INFO 6068 --- [restartedMain] com.hm.mydata.DemoApplication            : No active profile set, falling back to 1 default profile: "default"
+2022-06-20 12:42:30.896  INFO 6068 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\1iamm\.gradle\caches\modules-2\files-2.1\com.oracle.database.jdbc\ojdbc8\21.3.0.0\73649ab9bfb94daa4df21b80c98ac35aea4aa2f5\ojdbc8-21.3.0.0.jar referenced one or more files that do not exist: file:/C:/Users/1iamm/.gradle/caches/modules-2/files-2.1/com.oracle.database.jdbc/ojdbc8/21.3.0.0/73649ab9bfb94daa4df21b80c98ac35aea4aa2f5/oraclepki.jar
+2022-06-20 12:42:30.897  INFO 6068 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-06-20 12:42:30.898  INFO 6068 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-06-20 12:42:33.831  INFO 6068 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-06-20 12:42:33.854  INFO 6068 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-20 12:42:33.855  INFO 6068 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-06-20 12:42:34.125  INFO 6068 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-06-20 12:42:34.126  INFO 6068 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3227 ms
+2022-06-20 12:42:36.389  WARN 6068 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-06-20 12:42:36.452  INFO 6068 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-06-20 12:42:36.478  INFO 6068 --- [restartedMain] com.hm.mydata.DemoApplication            : Started DemoApplication in 7.025 seconds (JVM running for 10.15)
+2022-06-20 12:42:40.718  INFO 6068 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-20 12:42:40.719  INFO 6068 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-06-20 12:42:40.721  INFO 6068 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-06-20 12:42:40.966  INFO 6068 --- [http-nio-8080-exec-2] tConfig$$EnhancerBySpringCGLIB$$5c972192 : Request: GET http://localhost:8081/oauth/2.0/authorize?response-type=code&org_code=&client_id=&redirect_uri=&app_scheme=&state=_20220620124240798926724342
+2022-06-20 12:42:40.969  INFO 6068 --- [http-nio-8080-exec-2] tConfig$$EnhancerBySpringCGLIB$$5c972192 : --- Http Headers: ---
+2022-06-20 12:42:40.972  INFO 6068 --- [http-nio-8080-exec-2] tConfig$$EnhancerBySpringCGLIB$$5c972192 : gtw-custom-url=
+2022-06-20 12:42:40.973  INFO 6068 --- [http-nio-8080-exec-2] tConfig$$EnhancerBySpringCGLIB$$5c972192 : x-api-tran-id=
+2022-06-20 12:42:40.973  INFO 6068 --- [http-nio-8080-exec-2] tConfig$$EnhancerBySpringCGLIB$$5c972192 : x-user-ci=1234
+2022-06-20 12:42:40.973  INFO 6068 --- [http-nio-8080-exec-2] tConfig$$EnhancerBySpringCGLIB$$5c972192 : --- Http Cookies: ---
+2022-06-20 12:42:41.803  INFO 6068 --- [reactor-http-nio-2] c.hm.mydata.md.service.WebClientService  : else :: [Location:"offerureeeel", Content-Type:"application/json", Transfer-Encoding:"chunked", Date:"Mon, 20 Jun 2022 03:42:41 GMT", Connection:"close"]
+2022-06-20 12:42:42.052  INFO 6068 --- [http-nio-8080-exec-2] c.hm.mydata.md.service.WebClientService  : END
+2022-06-20 12:42:42.053  INFO 6068 --- [http-nio-8080-exec-2] c.hm.mydata.md.service.WebClientService  : resVOCertResVO(org_code=A1AAER0000, install_url_android=HTTP, app_scheme_android=ERKSE, app_scheme_iOS=IOS APPSCHEM, install_url_iOS=IOS URL, code=null, state=null, api_tran_id=null, error=400, error_description=invalid request)
+2022-06-20 12:44:19.693  INFO 6068 --- [RMI TCP Connection(8)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2022-06-20 12:44:29.546  INFO 13860 --- [restartedMain] o.s.nativex.NativeListener               : AOT mode disabled
+2022-06-20 12:44:29.814  INFO 13860 --- [restartedMain] com.hm.mydata.DemoApplication            : Starting DemoApplication using Java 17.0.2 on DESKTOP-0D78BFJ with PID 13860 (C:\zzic-oyo\workspace\demo\bin\main started by 1iamm in C:\zzic-oyo\workspace\demo)
+2022-06-20 12:44:29.816  INFO 13860 --- [restartedMain] com.hm.mydata.DemoApplication            : No active profile set, falling back to 1 default profile: "default"
+2022-06-20 12:44:29.974  INFO 13860 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\1iamm\.gradle\caches\modules-2\files-2.1\com.oracle.database.jdbc\ojdbc8\21.3.0.0\73649ab9bfb94daa4df21b80c98ac35aea4aa2f5\ojdbc8-21.3.0.0.jar referenced one or more files that do not exist: file:/C:/Users/1iamm/.gradle/caches/modules-2/files-2.1/com.oracle.database.jdbc/ojdbc8/21.3.0.0/73649ab9bfb94daa4df21b80c98ac35aea4aa2f5/oraclepki.jar
+2022-06-20 12:44:29.975  INFO 13860 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-06-20 12:44:29.976  INFO 13860 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-06-20 12:44:33.058  INFO 13860 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-06-20 12:44:33.079  INFO 13860 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-20 12:44:33.080  INFO 13860 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-06-20 12:44:33.373  INFO 13860 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-06-20 12:44:33.374  INFO 13860 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3397 ms
+2022-06-20 12:44:35.729  WARN 13860 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-06-20 12:44:35.787  INFO 13860 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-06-20 12:44:35.815  INFO 13860 --- [restartedMain] com.hm.mydata.DemoApplication            : Started DemoApplication in 7.324 seconds (JVM running for 10.32)
+2022-06-20 12:44:42.129  INFO 13860 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-20 12:44:42.130  INFO 13860 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-06-20 12:44:42.132  INFO 13860 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-06-20 12:44:42.366  INFO 13860 --- [http-nio-8080-exec-2] tConfig$$EnhancerBySpringCGLIB$$9cab9478 : Request: GET http://localhost:8081/oauth/2.0/authorize?response-type=code&org_code=&client_id=&redirect_uri=&app_scheme=&state=_20220620124442212395803952
+2022-06-20 12:44:42.370  INFO 13860 --- [http-nio-8080-exec-2] tConfig$$EnhancerBySpringCGLIB$$9cab9478 : --- Http Headers: ---
+2022-06-20 12:44:42.373  INFO 13860 --- [http-nio-8080-exec-2] tConfig$$EnhancerBySpringCGLIB$$9cab9478 : gtw-custom-url=
+2022-06-20 12:44:42.374  INFO 13860 --- [http-nio-8080-exec-2] tConfig$$EnhancerBySpringCGLIB$$9cab9478 : x-api-tran-id=
+2022-06-20 12:44:42.375  INFO 13860 --- [http-nio-8080-exec-2] tConfig$$EnhancerBySpringCGLIB$$9cab9478 : x-user-ci=1234
+2022-06-20 12:44:42.375  INFO 13860 --- [http-nio-8080-exec-2] tConfig$$EnhancerBySpringCGLIB$$9cab9478 : --- Http Cookies: ---
+2022-06-20 12:44:43.128  INFO 13860 --- [reactor-http-nio-2] tConfig$$EnhancerBySpringCGLIB$$9cab9478 : Response: 400 BAD_REQUEST
+2022-06-20 12:44:43.135  INFO 13860 --- [reactor-http-nio-2] tConfig$$EnhancerBySpringCGLIB$$9cab9478 : Location=offerureeeel
+2022-06-20 12:44:43.136  INFO 13860 --- [reactor-http-nio-2] tConfig$$EnhancerBySpringCGLIB$$9cab9478 : Content-Type=application/json
+2022-06-20 12:44:43.136  INFO 13860 --- [reactor-http-nio-2] tConfig$$EnhancerBySpringCGLIB$$9cab9478 : Transfer-Encoding=chunked
+2022-06-20 12:44:43.136  INFO 13860 --- [reactor-http-nio-2] tConfig$$EnhancerBySpringCGLIB$$9cab9478 : Date=Mon, 20 Jun 2022 03:44:43 GMT
+2022-06-20 12:44:43.137  INFO 13860 --- [reactor-http-nio-2] tConfig$$EnhancerBySpringCGLIB$$9cab9478 : Connection=close
+2022-06-20 12:44:43.138  INFO 13860 --- [reactor-http-nio-2] c.hm.mydata.md.service.WebClientService  : else :: [Location:"offerureeeel", Content-Type:"application/json", Transfer-Encoding:"chunked", Date:"Mon, 20 Jun 2022 03:44:43 GMT", Connection:"close"]
+2022-06-20 12:44:43.346  INFO 13860 --- [http-nio-8080-exec-2] c.hm.mydata.md.service.WebClientService  : END
+2022-06-20 12:44:43.347  INFO 13860 --- [http-nio-8080-exec-2] c.hm.mydata.md.service.WebClientService  : resVOCertResVO(org_code=A1AAER0000, install_url_android=HTTP, app_scheme_android=ERKSE, app_scheme_iOS=IOS APPSCHEM, install_url_iOS=IOS URL, code=null, state=null, api_tran_id=null, error=400, error_description=invalid request)
