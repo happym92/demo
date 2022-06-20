@@ -20,11 +20,11 @@ import lombok.extern.slf4j.Slf4j;
  * 3. Package   : kmds.com.framework.common.utils
  * 4. Comment   :
  * @author      : User
- * @version     : 2021. 12. 28. �삤�썑 5:23:19
+ * @version     : 2021. 12. 28. 占쎌궎占쎌뜎 5:23:19
  */
 @Slf4j
 public class StringUtil {
-	private static final Logger LOG = LogManager.getLogger(StringUtil.class);
+	private static final Logger log = LogManager.getLogger(StringUtil.class);
 
 	private static final String TAG_QUOT = "&quot;";
 	private static final String TAG_AMP = "&amp;";
@@ -33,7 +33,7 @@ public class StringUtil {
 	private static final String TAG_BR = "<br>";
 
 	/**
-	 * 臾몄옄�뿴�쓽 Empty or Null 泥댄겕
+	 * �눧紐꾩쁽占쎈였占쎌벥 Empty or Null 筌ｋ똾寃�
 	 *
 	 * @param str
 	 * @return
@@ -43,7 +43,7 @@ public class StringUtil {
 	 * 2. ClassName         : StringUtil
 	 * 3. Comment           :
 	 * @author              : User
-	 * @version             : 2021. 12. 28. �삤�썑 5:23:23
+	 * @version             : 2021. 12. 28. 占쎌궎占쎌뜎 5:23:23
 	 * @return boolean
 	 * @param str
 	 * @return
@@ -53,7 +53,7 @@ public class StringUtil {
 	}
 
     /**
-     * 臾몄옄�뿴�쓽 notEmpty or notNull 泥댄겕
+     * �눧紐꾩쁽占쎈였占쎌벥 notEmpty or notNull 筌ｋ똾寃�
      *
      * @param str
      * @return
@@ -63,7 +63,7 @@ public class StringUtil {
 	}
 
 //    /**
-//     * Object Empty or Null 泥댄겕
+//     * Object Empty or Null 筌ｋ똾寃�
 //     *
 //     * @param str
 //     * @return
@@ -73,7 +73,7 @@ public class StringUtil {
 //	}
 //
 //	/**
-//	 * Object notEmpty or notNull 泥댄겕
+//	 * Object notEmpty or notNull 筌ｋ똾寃�
 //	 *
 //	 * @param str
 //	 * @return
@@ -83,7 +83,7 @@ public class StringUtil {
 //	}
 
     /**
-     * 臾몄옄�뿴 Null 泥댄겕
+     * �눧紐꾩쁽占쎈였 Null 筌ｋ똾寃�
      *
      * @param str
      * @return
@@ -93,7 +93,7 @@ public class StringUtil {
 	}
 
     /**
-     * 臾몄옄�뿴 Null 泥댄겕
+     * �눧紐꾩쁽占쎈였 Null 筌ｋ똾寃�
      *
      * @param str
      * @return
@@ -103,7 +103,7 @@ public class StringUtil {
 	}
 
     /**
-     * Object Null 泥댄겕
+     * Object Null 筌ｋ똾寃�
      *
      * @param str
      * @return
@@ -113,7 +113,7 @@ public class StringUtil {
 	}
 
     /**
-     * Object Null 泥댄겕
+     * Object Null 筌ｋ똾寃�
      *
      * @param str
      * @return
@@ -123,7 +123,7 @@ public class StringUtil {
 	}
 
 	/**
-	 * 臾몄옄�뿴�쓽 Null 媛� 移섑솚
+	 * �눧紐꾩쁽占쎈였占쎌벥 Null 揶쏉옙 燁살꼹�넎
 	 *
 	 * @param str
 	 * @param replacer
@@ -138,7 +138,7 @@ public class StringUtil {
 	}
 
     /**
-    * �빐�떦 Object瑜� String�쑝濡� �삎蹂��삎�븯�뿬 由ы꽩�븳�떎.
+    * 占쎈퉸占쎈뼣 Object�몴占� String占쎌몵嚥∽옙 占쎌굨癰귨옙占쎌굨占쎈릭占쎈연 �뵳�뗪쉘占쎈립占쎈뼄.
     * <p>
     * @param    obj
     * @return
@@ -150,7 +150,7 @@ public class StringUtil {
         	try {
         		str = String.valueOf(obj);
         	} catch(Exception e) {
-        		LOG.error("error stack", e);
+        		log.error("error stack", e);
         	}
 
         	if(str.equals("null") || (str.length() == 0)) {
@@ -166,7 +166,7 @@ public class StringUtil {
 	 * 2. ClassName         : StringUtil
 	 * 3. Comment           :
 	 * @author              : User
-	 * @version             : 2021. 12. 28. �삤�썑 5:23:31
+	 * @version             : 2021. 12. 28. 占쎌궎占쎌뜎 5:23:31
 	 * @return int
 	 * @param strPostfix
 	 * @return
@@ -184,7 +184,7 @@ public class StringUtil {
 	}
 
 	/**
-	 * 臾몄옄�뿴�쓣 �듅�젙 �겕湲곕줈 �옒�씪�궦�떎.
+	 * �눧紐꾩쁽占쎈였占쎌뱽 占쎈뱟占쎌젟 占쎄쾿疫꿸퀡以� 占쎌삋占쎌뵬占쎄땋占쎈뼄.
 	 *
 	 * @param strSource
 	 * @param cutByte
@@ -215,10 +215,10 @@ public class StringUtil {
 
 			int byteSize = 0;
 			if (charArray[strIndex] < 256) {
-				// 1byte character �씠硫�
+				// 1byte character 占쎌뵠筌롳옙
 				byteSize = 1;
 			} else {
-				// 2byte character �씠硫�
+				// 2byte character 占쎌뵠筌롳옙
 				byteSize = 2;
 			}
 
@@ -242,10 +242,10 @@ public class StringUtil {
 	}
 
 	/**
-	 * delimeter濡� �뀈,�썡,�씪�쓣 援щ텇�빐�꽌 �굹�늿�떎.
+	 * delimeter嚥∽옙 占쎈��,占쎌뜞,占쎌뵬占쎌뱽 �뤃�됲뀋占쎈퉸占쎄퐣 占쎄돌占쎈듌占쎈뼄.
 	 *
-	 * @param value HHMMSS濡� 援ъ꽦�릺�뼱 �엳�뒗 String
-	 * @return 援щ텇�옄濡� 援щ텇�씠 �맂 寃곌낵 媛�
+	 * @param value HHMMSS嚥∽옙 �뤃�딄쉐占쎈┷占쎈선 占쎌뿳占쎈뮉 String
+	 * @return �뤃�됲뀋占쎌쁽嚥∽옙 �뤃�됲뀋占쎌뵠 占쎈쭆 野껉퀗�궢 揶쏉옙
 	 */
 	public static String formatDate(String str, String delimeter) {
 		if (str == null || str.length() != 8) {
@@ -268,7 +268,7 @@ public class StringUtil {
 	 * 2. ClassName         : StringUtil
 	 * 3. Comment           :
 	 * @author              : User
-	 * @version             : 2021. 12. 28. �삤�썑 5:23:37
+	 * @version             : 2021. 12. 28. 占쎌궎占쎌뜎 5:23:37
 	 * @return String
 	 * @param str
 	 * @return
@@ -278,10 +278,10 @@ public class StringUtil {
 	}
 
 	/**
-	 * delimeter濡� �떆,遺�,珥� �쓣 援щ텇�빐�꽌 �굹�늿�떎.
+	 * delimeter嚥∽옙 占쎈뻻,�겫占�,�룯占� 占쎌뱽 �뤃�됲뀋占쎈퉸占쎄퐣 占쎄돌占쎈듌占쎈뼄.
 	 *
-	 * @param value HHMMSS濡� 援ъ꽦�릺�뼱 �엳�뒗 String
-	 * @return 援щ텇�옄濡� 援щ텇�씠 �맂 寃곌낵 媛�
+	 * @param value HHMMSS嚥∽옙 �뤃�딄쉐占쎈┷占쎈선 占쎌뿳占쎈뮉 String
+	 * @return �뤃�됲뀋占쎌쁽嚥∽옙 �뤃�됲뀋占쎌뵠 占쎈쭆 野껉퀗�궢 揶쏉옙
 	 */
 	public static String formatTime(String str, String delimeter) {
 		if (str == null || str.length() != 6) {
@@ -304,7 +304,7 @@ public class StringUtil {
 	 * 2. ClassName         : StringUtil
 	 * 3. Comment           :
 	 * @author              : User
-	 * @version             : 2021. 12. 28. �삤�썑 5:23:41
+	 * @version             : 2021. 12. 28. 占쎌궎占쎌뜎 5:23:41
 	 * @return String
 	 * @param str
 	 * @return
@@ -314,20 +314,20 @@ public class StringUtil {
 	}
 
 	/**
-	 * �꽆�뼱�삩 媛믪뿉 �꽭�옄由щ쭏�떎 ','瑜� �꽔�뼱二쇰뒗 �븿�닔.
+	 * 占쎄퐜占쎈선占쎌궔 揶쏅�る퓠 占쎄쉭占쎌쁽�뵳�됱춳占쎈뼄 ','�몴占� 占쎄퐫占쎈선雅뚯눖�뮉 占쎈맙占쎈땾.
 	 *
-	 * @param value comma瑜� 遺숈뿬�빞 �릺�뒗 �닽�옄
-	 * @return �꽭�옄由� 留덈떎 ,媛� 遺숈뼱 �엳�뒗 String
+	 * @param value comma�몴占� �겫�늿肉э옙鍮� 占쎈┷占쎈뮉 占쎈떭占쎌쁽
+	 * @return 占쎄쉭占쎌쁽�뵳占� 筌띾뜄�뼄 ,揶쏉옙 �겫�늿堉� 占쎌뿳占쎈뮉 String
 	 */
 	public static String formatNumber(int value) {
 		return formatNumber(String.valueOf(value));
 	}
 
 	/**
-	 * �꽆�뼱�삩 媛믪뿉 �꽭�옄由щ쭏�떎 ','瑜� �꽔�뼱二쇰뒗 �븿�닔. �닽�옄�씤吏��뒗 泥댄겕�븯吏� �븡�쓬.
+	 * 占쎄퐜占쎈선占쎌궔 揶쏅�る퓠 占쎄쉭占쎌쁽�뵳�됱춳占쎈뼄 ','�몴占� 占쎄퐫占쎈선雅뚯눖�뮉 占쎈맙占쎈땾. 占쎈떭占쎌쁽占쎌뵥筌욑옙占쎈뮉 筌ｋ똾寃뺧옙釉�筌욑옙 占쎈륫占쎌벉.
 	 *
-	 * @param value comma瑜� 遺숈뿬�빞 �릺�뒗 String
-	 * @return �꽭�옄由� 留덈떎 ,媛� 遺숈뼱 �엳�뒗 String
+	 * @param value comma�몴占� �겫�늿肉э옙鍮� 占쎈┷占쎈뮉 String
+	 * @return 占쎄쉭占쎌쁽�뵳占� 筌띾뜄�뼄 ,揶쏉옙 �겫�늿堉� 占쎌뿳占쎈뮉 String
 	 */
 	public static String formatNumber(String str) {
 		if (str == null || str.equals("")) {
@@ -344,10 +344,10 @@ public class StringUtil {
 	}
 
 	/**
-	 * 999,999,999 �삉�뒗 999,999,999.99 format�쑝濡� �릺�뼱�엳�뒗 �옄猷뚮�� ','媛� �뾾�뒗 �삎�떇�쑝濡� 蹂��솚
+	 * 999,999,999 占쎌굢占쎈뮉 999,999,999.99 format占쎌몵嚥∽옙 占쎈┷占쎈선占쎌뿳占쎈뮉 占쎌쁽�뙴�슢占쏙옙 ','揶쏉옙 占쎈씨占쎈뮉 占쎌굨占쎈뻼占쎌몵嚥∽옙 癰귨옙占쎌넎
 	 *
-	 * @param value String type�쓽 �뜲�씠�꽣
-	 * @return String �닽�옄 format�쑝濡� 蹂��솚�맂 �뜲�씠�꽣
+	 * @param value String type占쎌벥 占쎈쑓占쎌뵠占쎄숲
+	 * @return String 占쎈떭占쎌쁽 format占쎌몵嚥∽옙 癰귨옙占쎌넎占쎈쭆 占쎈쑓占쎌뵠占쎄숲
 	 */
 	public static String unformatNumber(String value) {
 		if (value == null) {
@@ -366,11 +366,11 @@ public class StringUtil {
 	}
 
 	/**
-	 * 吏��뿭踰덊샇�굹 �빖�뱶�룿�쓽 �넻�떊�뾽�옄踰덊샇瑜� �뙆�떛(0�궘�젣)�븯�뿬 由ы꽩�븳�떎.
+	 * 筌욑옙占쎈열甕곕뜇�깈占쎄돌 占쎈퉾占쎈굡占쎈？占쎌벥 占쎈꽰占쎈뻿占쎈씜占쎌쁽甕곕뜇�깈�몴占� 占쎈솁占쎈뼓(0占쎄텣占쎌젫)占쎈릭占쎈연 �뵳�뗪쉘占쎈립占쎈뼄.
 	 *
-	 * @param value �뙆�떛�븷 踰덊샇 String
-	 * @param gubun 吏��뿭踰덊샇�씤吏� �넻�떊�뾽�옄踰덊샇�씤吏�瑜� 援щ텇�븯�뒗 援щ텇�옄( R or H )
-	 * @return �뙆�떛�맂 寃곌낵 媛�
+	 * @param value 占쎈솁占쎈뼓占쎈막 甕곕뜇�깈 String
+	 * @param gubun 筌욑옙占쎈열甕곕뜇�깈占쎌뵥筌욑옙 占쎈꽰占쎈뻿占쎈씜占쎌쁽甕곕뜇�깈占쎌뵥筌욑옙�몴占� �뤃�됲뀋占쎈릭占쎈뮉 �뤃�됲뀋占쎌쁽( R or H )
+	 * @return 占쎈솁占쎈뼓占쎈쭆 野껉퀗�궢 揶쏉옙
 	 */
 	public static String formatTel1(String value, String gubun) {
 		if (value == null || value.equals("") || value.length() != 4) {
@@ -383,21 +383,21 @@ public class StringUtil {
 	}
 
 	/**
-	 * �쟾�솕踰덊샇瑜� �뙆�떛(0�궘�젣)�븯�뿬 由ы꽩�븳�떎.
+	 * 占쎌읈占쎌넅甕곕뜇�깈�몴占� 占쎈솁占쎈뼓(0占쎄텣占쎌젫)占쎈릭占쎈연 �뵳�뗪쉘占쎈립占쎈뼄.
 	 *
-	 * @param value �뙆�떛�븷 踰덊샇 String
-	 * @return �뙆�떛�맂 寃곌낵 媛�
+	 * @param value 占쎈솁占쎈뼓占쎈막 甕곕뜇�깈 String
+	 * @return 占쎈솁占쎈뼓占쎈쭆 野껉퀗�궢 揶쏉옙
 	 */
 	public static String formatTel2(String value) {
 		return formatTel2(value, null);
 	}
 
 	/**
-	 * �쟾�솕踰덊샇瑜� �뙆�떛(0�궘�젣)�븯�뿬 由ы꽩�븳�떎.
+	 * 占쎌읈占쎌넅甕곕뜇�깈�몴占� 占쎈솁占쎈뼓(0占쎄텣占쎌젫)占쎈릭占쎈연 �뵳�뗪쉘占쎈립占쎈뼄.
 	 *
-	 * @param value     �뙆�떛�븷 踰덊샇 String
-	 * @param delimeter 援�踰덇낵 踰덊샇瑜� 援щ텇�븯�뒗 臾몄옄( eg. '-'...)
-	 * @return value �뙆�떛�맂 寃곌낵 媛�
+	 * @param value     占쎈솁占쎈뼓占쎈막 甕곕뜇�깈 String
+	 * @param delimeter �뤃占썼린�뜃�궢 甕곕뜇�깈�몴占� �뤃�됲뀋占쎈릭占쎈뮉 �눧紐꾩쁽( eg. '-'...)
+	 * @return value 占쎈솁占쎈뼓占쎈쭆 野껉퀗�궢 揶쏉옙
 	 */
 	public static String formatTel2(String valueStr, String delimeter) {
 
@@ -422,10 +422,10 @@ public class StringUtil {
 	}
 
 	/**
-	 * �꽆�뼱�삩 媛믪뿉 �꽕�옄由щ쭏�떎 '-'瑜� �꽔�뼱二쇰뒗 �븿�닔.
+	 * 占쎄퐜占쎈선占쎌궔 揶쏅�る퓠 占쎄퐬占쎌쁽�뵳�됱춳占쎈뼄 '-'�몴占� 占쎄퐫占쎈선雅뚯눖�뮉 占쎈맙占쎈땾.
 	 *
-	 * @param value �뙆�떛�븷 踰덊샇 String
-	 * @return �뙆�떛�맂 寃곌낵 媛�
+	 * @param value 占쎈솁占쎈뼓占쎈막 甕곕뜇�깈 String
+	 * @return 占쎈솁占쎈뼓占쎈쭆 野껉퀗�궢 揶쏉옙
 	 */
 	public static String formatCard(String value) {
 		if (value == null || value.equals("") || value.length() != 16) {
@@ -437,10 +437,10 @@ public class StringUtil {
 	}
 
 	/**
-	 * 臾몄옄�뿴�쓽 �븵�뿉 �엳�뒗 0�쓣 �궘�젣�븯�뿬 由ы꽩�븳�떎.
+	 * �눧紐꾩쁽占쎈였占쎌벥 占쎈링占쎈퓠 占쎌뿳占쎈뮉 0占쎌뱽 占쎄텣占쎌젫占쎈릭占쎈연 �뵳�뗪쉘占쎈립占쎈뼄.
 	 *
-	 * @param value �뙆�떛�븷 踰덊샇 String
-	 * @return value �뙆�떛�맂 寃곌낵 媛�
+	 * @param value 占쎈솁占쎈뼓占쎈막 甕곕뜇�깈 String
+	 * @return value 占쎈솁占쎈뼓占쎈쭆 野껉퀗�궢 揶쏉옙
 	 */
 	public static String firstZeroDel(String valueStr) {
 
@@ -456,10 +456,10 @@ public class StringUtil {
 	}
 
 	/**
-	 * 8859-1�쓣 euc-kr濡� 諛붽씔�떎.
+	 * 8859-1占쎌뱽 euc-kr嚥∽옙 獄쏅떽�뵒占쎈뼄.
 	 *
-	 * @param str �씤肄붾뵫�븷 臾몄옄�뿴 String
-	 * @return �씤肄붾뵫�맂 寃곌낵 媛�
+	 * @param str 占쎌뵥�굜遺얜뎃占쎈막 �눧紐꾩쁽占쎈였 String
+	 * @return 占쎌뵥�굜遺얜뎃占쎈쭆 野껉퀗�궢 揶쏉옙
 	 */
 	public static String toKorean(String value) {
 		String str = value;
@@ -468,7 +468,7 @@ public class StringUtil {
 				str = new String(str.getBytes(StandardCharsets.ISO_8859_1), "utf-8");
 			}
 		} catch (UnsupportedEncodingException e) {
-			LOG.error("error stack", e);
+			log.error("error stack", e);
 			return "ENCORDING ERROR";
 		}
 
@@ -476,10 +476,10 @@ public class StringUtil {
 	}
 
 	/**
-	 * euc-kr�쓣 8859-1濡� 諛붽씔�떎.
+	 * euc-kr占쎌뱽 8859-1嚥∽옙 獄쏅떽�뵒占쎈뼄.
 	 *
-	 * @param str �씤肄붾뵫�븷 臾몄옄�뿴 String
-	 * @return �씤肄붾뵫�맂 寃곌낵 媛�
+	 * @param str 占쎌뵥�굜遺얜뎃占쎈막 �눧紐꾩쁽占쎈였 String
+	 * @return 占쎌뵥�굜遺얜뎃占쎈쭆 野껉퀗�궢 揶쏉옙
 	 */
 	public static String toEnglish(String value) {
 		String str = value;
@@ -488,7 +488,7 @@ public class StringUtil {
 				str = new String(str.getBytes("utf-8"), StandardCharsets.ISO_8859_1);
 			}
 		} catch (UnsupportedEncodingException e) {
-			LOG.error("error stack", e);
+			log.error("error stack", e);
 			return "ENCORDING ERROR";
 		}
 
@@ -496,10 +496,10 @@ public class StringUtil {
 	}
 
 	/**
-	 * lpad �븿�닔
+	 * lpad 占쎈맙占쎈땾
 	 *
-	 * @param str ���긽臾몄옄�뿴, len 湲몄씠, addStr ��泥대Ц�옄
-	 * @return 臾몄옄�뿴
+	 * @param str 占쏙옙占쎄맒�눧紐꾩쁽占쎈였, len 疫뀀챷�뵠, addStr 占쏙옙筌ｋ�揆占쎌쁽
+	 * @return �눧紐꾩쁽占쎈였
 	 */
 	public static String lpad(String str, int len, String addStr) {
 		String result = str;
@@ -513,11 +513,11 @@ public class StringUtil {
 	}
 
 	/**
-	 * 臾몄옄�뿴 移섑솚
-	 * @param �썝蹂� String
-	 * @param 踰붿쐞 �떆�옉 index
-	 * @param 踰붿쐞 醫낅즺 index
-	 * @param 蹂�寃쎈맆 臾몄옄
+	 * �눧紐꾩쁽占쎈였 燁살꼹�넎
+	 * @param 占쎌뜚癰귨옙 String
+	 * @param 甕곕뗄�맄 占쎈뻻占쎌삂 index
+	 * @param 甕곕뗄�맄 �넫�굝利� index
+	 * @param 癰귨옙野껋럥留� �눧紐꾩쁽
 	 * @return
 	 *
 	 */
@@ -542,7 +542,7 @@ public class StringUtil {
 	}
 
 	/**
-	 * 臾몄옄�뿴�쓣 移섑솚�븿
+	 * �눧紐꾩쁽占쎈였占쎌뱽 燁살꼹�넎占쎈맙
 	 *
 	 * @param str
 	 * @param sourceStr
@@ -583,7 +583,7 @@ public class StringUtil {
 	}
 
 	/**
-	 * 臾몄옄�뿴�쓽 Null�쓣 Empty濡� 移섑솚�븿
+	 * �눧紐꾩쁽占쎈였占쎌벥 Null占쎌뱽 Empty嚥∽옙 燁살꼹�넎占쎈맙
 	 *
 	 * @param str
 	 * @return
@@ -597,8 +597,8 @@ public class StringUtil {
 	}
 
 	/**
-	 * 臾몄옄�뿴�쓽 \n�쓣 <br>
-	 * 濡� 移섑솚�븿
+	 * �눧紐꾩쁽占쎈였占쎌벥 \n占쎌뱽 <br>
+	 * 嚥∽옙 燁살꼹�넎占쎈맙
 	 *
 	 * @param str
 	 * @return
@@ -613,7 +613,7 @@ public class StringUtil {
 	}
 
 	/**
-	 * 臾몄옄�뿴 移섑솚
+	 * �눧紐꾩쁽占쎈였 燁살꼹�넎
 	 *
 	 * @param value
 	 * @return
@@ -630,7 +630,7 @@ public class StringUtil {
 	}
 
 	/**
-	 * 臾몄옄�뿴 移섑솚
+	 * �눧紐꾩쁽占쎈였 燁살꼹�넎
 	 *
 	 * @param value
 	 * @return
@@ -647,7 +647,7 @@ public class StringUtil {
 	}
 
 	/**
-	 * 臾몄옄�뿴 移섑솚
+	 * �눧紐꾩쁽占쎈였 燁살꼹�넎
 	 *
 	 * @param value
 	 * @return
@@ -674,7 +674,7 @@ public class StringUtil {
 	}
 
 	/**
-	 * 臾몄옄�뿴 移섑솚
+	 * �눧紐꾩쁽占쎈였 燁살꼹�넎
 	 *
 	 * @param value
 	 * @return
@@ -689,7 +689,7 @@ public class StringUtil {
 	}
 
 	/**
-	 * 臾몄옄�뿴 移섑솚
+	 * �눧紐꾩쁽占쎈였 燁살꼹�넎
 	 *
 	 * @param value
 	 * @return
@@ -708,7 +708,7 @@ public class StringUtil {
 	}
 
 	/**
-	 * 援щ텇�옄瑜� 媛�吏� String�쓣 諛쏆븘�꽌 List�삎�깭濡� 由ы꽩�븿
+	 * �뤃�됲뀋占쎌쁽�몴占� 揶쏉옙筌욑옙 String占쎌뱽 獄쏆룇釉섓옙苑� List占쎌굨占쎄묶嚥∽옙 �뵳�뗪쉘占쎈맙
 	 *
 	 * @param str
 	 * @param delim
@@ -731,7 +731,7 @@ public class StringUtil {
 	}
 
 	/**
-	 * tring[] �쓣 諛쏆븘�꽌 List �삎�깭濡� 由ы꽩�븿.
+	 * tring[] 占쎌뱽 獄쏆룇釉섓옙苑� List 占쎌굨占쎄묶嚥∽옙 �뵳�뗪쉘占쎈맙.
 	 *
 	 * @param str
 	 * @return
@@ -747,7 +747,7 @@ public class StringUtil {
 	}
 
 	/**
-	 * �뙆�씪 �솗�옣�옄瑜� 由ы꽩�븿
+	 * 占쎈솁占쎌뵬 占쎌넇占쎌삢占쎌쁽�몴占� �뵳�뗪쉘占쎈맙
 	 *
 	 * @param filename
 	 * @return
@@ -771,9 +771,9 @@ public class StringUtil {
 	 * assertEquals(&quot;1,2,3&quot;, StringUtil.makeSqlInStatement(numberItem, false));
 	 * </pre>
 	 *
-	 * @param items in 議곌굔�뿉 �뱾�뼱媛� �븘�씠�뀥�뱾
-	 * @param quote �씤�슜遺��샇瑜� 遺숈씠�뒗吏� �뿬遺� true 硫� 遺숈씤�떎
-	 * @return 留뚮뱾�뼱吏� in 議곌굔臾�
+	 * @param items in 鈺곌퀗援뷂옙肉� 占쎈굶占쎈선揶쏉옙 占쎈툡占쎌뵠占쎈�ο옙諭�
+	 * @param quote 占쎌뵥占쎌뒠�겫占쏙옙�깈�몴占� �겫�늿�뵠占쎈뮉筌욑옙 占쎈연�겫占� true 筌롳옙 �겫�늿�뵥占쎈뼄
+	 * @return 筌띾슢諭억옙堉깍쭪占� in 鈺곌퀗援붻눧占�
 	 */
 	public static String makeSqlInStatement(String[] items, boolean quote) {
 		if (items == null || items.length == 0) {
@@ -789,7 +789,7 @@ public class StringUtil {
 	}
 
 	/**
-	 * HTML�뿉�꽌 �깭洹몃�� �젣�쇅�븳 臾몄옄留� 異붿텧�븯�뒗 �쑀�떥硫붿꽌�뱶
+	 * HTML占쎈퓠占쎄퐣 占쎄묶域밸챶占쏙옙 占쎌젫占쎌뇚占쎈립 �눧紐꾩쁽筌랃옙 �빊遺욱뀱占쎈릭占쎈뮉 占쎌�占쎈뼢筌롫뗄苑뚳옙諭�
 	 *
 	 * @param html the html
 	 * @return the string
@@ -804,9 +804,9 @@ public class StringUtil {
 	}
 
 	/**
-	 * 媛�蹂��씤�옄媛�(String)�쓣 諛쏆븘�꽌 �븯�굹�쓽 臾몄옄�뿴濡� �빀移�
+	 * 揶쏉옙癰귨옙占쎌뵥占쎌쁽揶쏉옙(String)占쎌뱽 獄쏆룇釉섓옙苑� 占쎈릭占쎄돌占쎌벥 �눧紐꾩쁽占쎈였嚥∽옙 占쎈�燁삼옙
 	 *
-	 * @param str String (媛�蹂��씤�옄)
+	 * @param str String (揶쏉옙癰귨옙占쎌뵥占쎌쁽)
 	 * @return the string
 	 */
 	public static String appendStr(String ...str) {
@@ -819,7 +819,7 @@ public class StringUtil {
 	}
 
 	 /**
-     * 臾몄옄�뿴 Null �븘�땲硫� Trim 泥섎━
+     * �눧紐꾩쁽占쎈였 Null 占쎈툡占쎈빍筌롳옙 Trim 筌ｌ꼶�봺
      *
      * @param str
      * @return
@@ -837,7 +837,7 @@ public class StringUtil {
 	 * 2. ClassName         : StringUtil
 	 * 3. Comment           :
 	 * @author              : User
-	 * @version             : 2021. 12. 28. �삤�썑 5:24:11
+	 * @version             : 2021. 12. 28. 占쎌궎占쎌뜎 5:24:11
 	 * @return String
 	 * @param paramStr
 	 * @return
@@ -855,7 +855,7 @@ public class StringUtil {
 	 * 2. ClassName         : StringUtil
 	 * 3. Comment           :
 	 * @author              : User
-	 * @version             : 2021. 12. 28. �삤�썑 5:24:17
+	 * @version             : 2021. 12. 28. 占쎌궎占쎌뜎 5:24:17
 	 * @return String
 	 * @param obj
 	 * @param keyName
@@ -885,9 +885,9 @@ public class StringUtil {
 	/**
 	 * 1. MethodName        : getHanGulLengthMs949
 	 * 2. ClassName         : StringUtil
-	 * 3. Comment           : �븳湲� �옄由ъ닔 媛��졇�삤湲�
+	 * 3. Comment           : 占쎈립疫뀐옙 占쎌쁽�뵳�딅땾 揶쏉옙占쎌죬占쎌궎疫뀐옙
 	 * @author              : hyun-wook, Kim
-	 * @version             : 2022. 1. 26. �삤�썑 12:33:46
+	 * @version             : 2022. 1. 26. 占쎌궎占쎌뜎 12:33:46
 	 * @return int
 	 * @param hangulStr
 	 * @return
@@ -911,9 +911,9 @@ public class StringUtil {
 	/**
 	 * 1. MethodName        : makeAmtName
 	 * 2. ClassName         : StringUtil
-	 * 3. Comment           : 湲덉븸 �옄由ъ닔�뿉 �뵲瑜� �닾�옄洹쒕え紐�
-	 * @author              : 留덈뜲101
-	 * @version             : 2022. 3. 22. �삤�썑 3:13:52
+	 * 3. Comment           : 疫뀀뜆釉� 占쎌쁽�뵳�딅땾占쎈퓠 占쎈뎡�몴占� 占쎈떮占쎌쁽域뱀뮆�걟筌륅옙
+	 * @author              : 筌띾뜄�쑓101
+	 * @version             : 2022. 3. 22. 占쎌궎占쎌뜎 3:13:52
 	 * @return String
 	 * @param amt
 	 * @return
@@ -922,28 +922,28 @@ public class StringUtil {
 
 		String returnVal = amt;
 
-		//�뼲�썝��
+		//占쎈섣占쎌뜚占쏙옙
 		if( returnVal.length() >= 9 ) {
 			if( 1 ==  returnVal.substring(0, returnVal.length()-8).length() ) {
-				returnVal = returnVal.substring(0, returnVal.length()-8).concat("�뼲�썝");
+				returnVal = returnVal.substring(0, returnVal.length()-8).concat("占쎈섣占쎌뜚");
 			}else if( 3 == returnVal.substring(0, returnVal.length()-8).length() ){
-				returnVal = returnVal.substring(0, returnVal.length()-10).concat("諛깆뼲�썝");
+				returnVal = returnVal.substring(0, returnVal.length()-10).concat("獄쏄퉮堉뀐옙�뜚");
 			}else if( 4 >= returnVal.substring(0, returnVal.length()-8).length() ){
-				returnVal = returnVal.substring(0, returnVal.length()-11).concat("泥쒖뼲�썝");
+				returnVal = returnVal.substring(0, returnVal.length()-11).concat("筌ｌ뮇堉뀐옙�뜚");
 			}
 
-		}else if( 8 == returnVal.length() ) { //泥쒕쭔�썝��
-			returnVal = returnVal.substring(0,1).concat("泥쒕쭔�썝");
-		}else if( 7 == returnVal.length() ) {// �굹癒몄� 100留뚯썝��
-			returnVal = returnVal.substring(0,1).concat("諛깅쭔�썝");
-		}else if( 6 == returnVal.length()){//�떗留뚯썝��
-			returnVal = returnVal.substring(0,2).concat("留뚯썝");
-		}else if( 5 == returnVal.length() ){//留뚯썝��
-			returnVal = returnVal.substring(0,1).concat("留뚯썝");
-		}else if( "0".equals(amt)) {  //�씠�븯
-			returnVal = "�씠�븯";
-		}else if( "-1".equals(amt)) {  //�씠�긽
-			returnVal = "�씠�긽";
+		}else if( 8 == returnVal.length() ) { //筌ｌ뮆彛뷂옙�뜚占쏙옙
+			returnVal = returnVal.substring(0,1).concat("筌ｌ뮆彛뷂옙�뜚");
+		}else if( 7 == returnVal.length() ) {// 占쎄돌�솒紐꾬옙 100筌띾슣�뜚占쏙옙
+			returnVal = returnVal.substring(0,1).concat("獄쏄퉭彛뷂옙�뜚");
+		}else if( 6 == returnVal.length()){//占쎈뼏筌띾슣�뜚占쏙옙
+			returnVal = returnVal.substring(0,2).concat("筌띾슣�뜚");
+		}else if( 5 == returnVal.length() ){//筌띾슣�뜚占쏙옙
+			returnVal = returnVal.substring(0,1).concat("筌띾슣�뜚");
+		}else if( "0".equals(amt)) {  //占쎌뵠占쎈릭
+			returnVal = "占쎌뵠占쎈릭";
+		}else if( "-1".equals(amt)) {  //占쎌뵠占쎄맒
+			returnVal = "占쎌뵠占쎄맒";
 		}
 
 		return returnVal;
@@ -952,9 +952,9 @@ public class StringUtil {
 	/**
 	 * 1. MethodName        : tagFilter
 	 * 2. ClassName         : StringUtil
-	 * 3. Comment           : �깭洹� �븘�꽣留�
+	 * 3. Comment           : 占쎄묶域뱄옙 占쎈툡占쎄숲筌랃옙
 	 * @author              : jjhan
-	 * @version             : 2022. 03. 22. �삤�썑 5:28:17
+	 * @version             : 2022. 03. 22. 占쎌궎占쎌뜎 5:28:17
 	 * @return String
 	 * @param String
 	 * @param str
@@ -974,9 +974,9 @@ public class StringUtil {
 	/**
 	 * 1. MethodName        : tagUnFilter
 	 * 2. ClassName         : StringUtil
-	 * 3. Comment           : �븘�꽣留곷맂 �깭洹� 臾몄옄 �썝蹂�
+	 * 3. Comment           : 占쎈툡占쎄숲筌띻낮留� 占쎄묶域뱄옙 �눧紐꾩쁽 占쎌뜚癰귨옙
 	 * @author              : jjhan
-	 * @version             : 2022. 03. 22. �삤�썑 5:28:17
+	 * @version             : 2022. 03. 22. 占쎌궎占쎌뜎 5:28:17
 	 * @return String
 	 * @param String
 	 * @param str

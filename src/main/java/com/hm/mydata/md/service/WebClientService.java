@@ -35,25 +35,45 @@ public class WebClientService {
 	public Map<String, String> 개별인증001() throws JSONException {
 		Map<String, String> rtnMap = new HashMap<String, String>();
 		
+		String apiDtcdCode = "AU01";
+		String apiUri = "/oauth/2.0/authorize";
+		String userCi = "1234";
+		String targetDomain = "";
+		String xApiTranId = "";
+		String mydtInstCode = "";
+		String clientId = "";
+		String kyoboRedirectUrl = "";
+		String kyoboAppScheme = "";
+		String state = "";
+		
+		// 상태값 생성
+		SecureRandom rnd = new SecureRandom();
+		int fnum = rnd.nextInt(9999);
+		int snum = rnd.nextInt(99999);
+		String Dttm = DateUtil.getMillisecond();
+		String fLpad = StringUtil.lpad( Integer.toString(fnum), 4, "0");
+		String sLpad = StringUtil.lpad( Integer.toString(snum), 5, "0");
+//		return mydtInstCode + "_" + Dttm + fLpad + sLpad;
+		
+		state = mydtInstCode + "_" + Dttm + fLpad + sLpad;
+		
 		MultiValueMap<String, String> headerMap = new LinkedMultiValueMap<String, String>();
+		headerMap.add("gtw-custom-url", targetDomain);
+		headerMap.add("x-api-tran-id", xApiTranId);
+		headerMap.add("x-user-ci", userCi);
+		
 		MultiValueMap<String, String> paramMap = new LinkedMultiValueMap<String, String>();
+		paramMap.add("response-type", "code");
+		paramMap.add("org_code", mydtInstCode);
+		paramMap.add("client_id", clientId);
+		paramMap.add("redirect_uri", kyoboRedirectUrl);
+		paramMap.add("app_scheme", kyoboAppScheme);
+		paramMap.add("state", state);
 		
-		Consumer<HttpHeaders> headers = v -> v.addAll(headerMap);
-		 
-		
-//		WebClient wc = wcc.apiClient(WebClient.builder());
-//		RequestHeadersSpec<?> ress = wc.get()
-//				               .uri(ub -> ub.path("/oauth/2.0/authorize")
-//				                            .queryParams(paramMap).build())
-//				               .headers(headers)
-//				               .exchangeToMono(res -> {
-//				            	   
-//				               }).b 
-			
 		
 		ResponseEntity<?> response = null;
 		try {
-			response = this.apiCallHeader();
+			response = this.getApiCall(apiUri, headerMap, paramMap);
 			
 		} catch (WebClientRequestException e) {
 			
@@ -88,43 +108,8 @@ public class WebClientService {
 		return rtnMap;
 	}
 	
-	public ResponseEntity<?> apiCallHeader() {
+	public ResponseEntity<?> getApiCall(String apiUri, MultiValueMap<String, String> headerMap, MultiValueMap<String, String> paramMap) {
 
-		String userCi = "1234";
-		String targetDomain = "";
-		String xApiTranId = "";
-		String mydtInstCode = "";
-		String clientId = "";
-		String kyoboRedirectUrl = "";
-		String kyoboAppScheme = "";
-		String state = "";
-		
-		// 상태값 생성
-		SecureRandom rnd = new SecureRandom();
-		int fnum = rnd.nextInt(9999);
-		int snum = rnd.nextInt(99999);
-		String Dttm = DateUtil.getMillisecond();
-		String fLpad = StringUtil.lpad( Integer.toString(fnum), 4, "0");
-		String sLpad = StringUtil.lpad( Integer.toString(snum), 5, "0");
-//		return mydtInstCode + "_" + Dttm + fLpad + sLpad;
-		
-		
-		state = mydtInstCode + "_" + Dttm + fLpad + sLpad;
-		
-		MultiValueMap<String, String> headerMap = new LinkedMultiValueMap<String, String>();
-		headerMap.add("gtw-custom-url", targetDomain);
-		headerMap.add("x-api-tran-id", xApiTranId);
-		headerMap.add("x-user-ci", userCi);
-		
-		MultiValueMap<String, String> paramMap = new LinkedMultiValueMap<String, String>();
-		paramMap.add("response-type", "code");
-		paramMap.add("org_code", mydtInstCode);
-		paramMap.add("client_id", clientId);
-		paramMap.add("redirect_uri", kyoboRedirectUrl);
-		paramMap.add("app_scheme", kyoboAppScheme);
-		paramMap.add("state", state);
-		
-		
 		Consumer<HttpHeaders> headers = v -> v.addAll(headerMap);
 		WebClient wc = wcc.apiClient(WebClient.builder());
 		ResponseEntity<?> ress = wc.get()
