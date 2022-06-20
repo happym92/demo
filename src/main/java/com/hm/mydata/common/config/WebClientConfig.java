@@ -42,7 +42,7 @@ public class WebClientConfig {
 			                   .filter(logResponse())
 			  				   .build();
 	}
-	// commit
+	// commite
 //	// 게이트웨이로 호출하는 기본 설정
 //	@Bean
 //	public WebClient apiClient(WebClient.Builder webClientBuilder, boolean isTestBedCall) {
