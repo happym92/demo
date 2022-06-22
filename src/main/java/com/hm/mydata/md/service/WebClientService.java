@@ -1,8 +1,13 @@
 package com.hm.mydata.md.service;
 
 import java.security.SecureRandom;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.ExecutionException;
 import java.util.function.Consumer;
 
 import org.slf4j.Logger;
@@ -113,7 +118,7 @@ public class WebClientService {
 		Consumer<HttpHeaders> headers = v -> v.addAll(headerMap);
 		WebClient wc = wcc.apiClient(WebClient.builder());
 		ResponseEntity<?> ress = wc.get()
-				              .uri(ub -> ub.path("/oauth/2.0/authorize")
+				              .uri(ub -> ub.path(apiUri)
 				                            .queryParams(paramMap).build())
 				              .headers(headers)
 				              .exchangeToMono(res -> {
@@ -166,6 +171,88 @@ public class WebClientService {
 		log.info("END");     
 		return ress;
 		
+	}
+
+	public Map<String, String> 병렬처리() {
+		MultiValueMap<String, String> headerMap = new LinkedMultiValueMap<String, String>();
+		MultiValueMap<String, String> paramMap = new LinkedMultiValueMap<String, String>();
+		Map<String, String> rtnMap = new HashMap<String, String>();
+		CompletableFuture<?> chk = new CompletableFuture<>();
+		
+		List<String> strList = new ArrayList<>(Arrays.asList("1","2","3"));
+		
+		for(int i = 1; i <= strList.size(); i++) {
+			log.info("Integer : " + Integer.toString(i));
+			log.info("Integer : " + Integer.toString(strList.size()));
+			String apiUri = "/gathering";
+			ResponseEntity<?> response = null;
+			try {
+				response = this.getApiCall(apiUri, headerMap, paramMap);
+				
+			} catch (WebClientRequestException e) {
+				
+				log.info("e.getMessage() ::" + e.getMessage());
+				log.info("e.getHeaders() ::" + e.getHeaders());
+				log.info("e.getMethod() :: " + e.getMethod());
+				rtnMap.put("error", "서버에러"); 
+				if(i == strList.size()) {
+					chk = CompletableFuture.completedFuture("");
+				}
+				continue;
+			}
+			
+			
+			if(i == strList.size()) {
+				chk = CompletableFuture.completedFuture("");
+			}
+			
+		}
+		
+		log.info("!!!!!!");
+		try {
+			chk.get();
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (ExecutionException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		log.info("!완!!!!");
+		return null;
+	}
+	
+	
+	public Map<String, String> 병렬처리2() {
+		MultiValueMap<String, String> headerMap = new LinkedMultiValueMap<String, String>();
+		MultiValueMap<String, String> paramMap = new LinkedMultiValueMap<String, String>();
+		Map<String, String> rtnMap = new HashMap<String, String>();
+		CompletableFuture<?> chk = new CompletableFuture<>();
+		
+		List<String> strList = new ArrayList<>(Arrays.asList("1"));
+		
+		for(int i = 1; i <= strList.size(); i++) {
+			log.info("Integer : " + Integer.toString(i));
+			log.info("Integer : " + Integer.toString(strList.size()));
+			String apiUri = "/gathering";
+			ResponseEntity<?> response = null;
+			try {
+				response = this.getApiCall(apiUri, headerMap, paramMap);
+				
+			} catch (WebClientRequestException e) {
+				
+				log.info("e.getMessage() ::" + e.getMessage());
+				log.info("e.getHeaders() ::" + e.getHeaders());
+				log.info("e.getMethod() :: " + e.getMethod());
+				rtnMap.put("error", "서버에러"); 
+				continue;
+			}
+			
+			
+			
+		}
+		
+		return null;
 	}
 
 	

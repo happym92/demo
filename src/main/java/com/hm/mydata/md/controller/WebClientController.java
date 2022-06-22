@@ -29,4 +29,13 @@ public class WebClientController {
 		return new ResponseEntity<>(rtnMap, HttpStatus.OK);
 	}
 	
+	@PostMapping("/gatheringTest")
+	public ResponseEntity<?> gatheringTest(@RequestHeader HttpHeaders header,
+			@RequestBody(required = false) Map<String, String> reqBody) throws Exception {
+		Map<String, String> rtnMap = new HashMap<String, String>(); 
+//		rtnMap = wcService.捍纺贸府();
+		rtnMap = wcService.捍纺贸府2();
+		return new ResponseEntity<>(rtnMap, HttpStatus.OK);
+	}
+	
 }
